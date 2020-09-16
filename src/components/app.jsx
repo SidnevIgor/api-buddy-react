@@ -9,7 +9,13 @@ class App extends Component {
     );
   }
   getData() {
-    fetchData('employees','GET').then(data => {
+    fetchData('employees','POST', {
+      "employeeId": 7,
+      "firstName": "Codie",
+      "lastName": "Stembridge",
+      "position": "consultant",
+      "storeId": 1
+    }).then(data => {
       console.log(data);
     });
   }
