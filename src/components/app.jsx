@@ -9,7 +9,7 @@ class App extends Component {
     );
   }
   getData() {
-    fetchData('api/employees','GET').then(data => {
+    fetchData('employees','GET').then(data => {
       console.log(data);
     });
   }
