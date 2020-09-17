@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+
 import fetchData from '../services/fetchData';
+
 
 class App extends Component {
   render() {
