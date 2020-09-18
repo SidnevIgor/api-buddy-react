@@ -4,26 +4,16 @@ import fetchData from '../services/fetchData';
 
 class Table extends Component {
   state = {
-    customers: [
-      {
-        "customerId": 1,
-        "firstName": "Evy",
-        "lastName": "Maxted",
-        "email": "emaxted0@theatlantic.com",
-        "tel": "266-846-9674",
-        "password": "zKEEMj"
-      }
-    ]
+    customers: []
   };
   render() {
     fetchData('customers','GET').then(data => {
-      this.state.customers = data;
-      console.log(this.state.customers);
+      this.setState({customers: data});
     });
     return (
     <div>
       <h1>There are {this.state.customers.length} customers</h1>
-      <table style={{width: "500px"}} className="table">
+      <table style={{width: "700px"}} className="table">
         <thead>
           <tr>
             <th scope="col">customerID</th>
@@ -33,15 +23,15 @@ class Table extends Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            {this.state.customers.map(customer => { return (
-              <React.Fragment>
-              <td key="customer.customerId">{customer.customerId}</td>
-              <td key="customer.firstName">{customer.firstName}</td>
-              </React.Fragment>
+            { this.state.customers.map( (customer, i) => { return (
+              <tr key={i}>
+              <td key={i+1}>{customer.customerId}</td>
+              <td key={i+2}>{customer.firstName}</td>
+              <td key={i+3}>{customer.lastName}</td>
+              <td key={i+4}>{customer.email}</td>
+              </tr>
             )
-            })}
-          </tr>
+            }) }
         </tbody>
       </table>
     </div>
