@@ -11,7 +11,7 @@ class Table extends Component {
       fetchData('customers','GET').then(data => {
         this.setState({customers: data});
       });
-      return <p>There are no customers</p>
+      return <h1>There are no customers</h1>
     }
     return (
     <div>
