@@ -45,7 +45,7 @@ class Table extends Component {
     fetchData('customers','GET').then(data => {
       this.setState({customers: data});
     });
-    this.state.isInit = true;
+    this.setState({isInit: true});
   }
   deleteRow = (id) => {
     let newArr = [...this.state.customers];
