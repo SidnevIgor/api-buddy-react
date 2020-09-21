@@ -4,13 +4,14 @@ import fetchData from '../services/fetchData';
 
 class Table extends Component {
   state = {
-    customers: []
+    customers: [],
+    isInit: false
   };
   render() {
+    if(!this.state.isInit) {
+      this.initComp();
+    }
     if(this.state.customers.length === 0) {
-      fetchData('customers','GET').then(data => {
-        this.setState({customers: data});
-      });
       return <h1>There are no customers</h1>
     }
     return (
@@ -39,6 +40,12 @@ class Table extends Component {
       </table>
     </div>
     );
+  }
+  initComp = () => {
+    fetchData('customers','GET').then(data => {
+      this.setState({customers: data});
+    });
+    this.state.isInit = true;
   }
   deleteRow = (id) => {
     let newArr = [...this.state.customers];
