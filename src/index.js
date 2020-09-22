@@ -5,6 +5,7 @@ import 'font-awesome/css/font-awesome.css';
 
 //import App from './components/app';
 //import Table from './components/table-ex';
-import Count from './components/counter'
+//import Counter from './components/counter';
+import Counters from './components/counters';
 
-ReactDOM.render(<Count/>, document.getElementById('root'));
+ReactDOM.render(<Counters/>, document.getElementById('root'));

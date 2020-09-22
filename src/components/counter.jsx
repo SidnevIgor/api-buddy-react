@@ -2,18 +2,21 @@ import React, {Component} from 'react';
 
 export default class Counter extends Component {
   state = {
-    count: 0
+    count: 0,
+    textClass: 'text-danger m-3'
   };
   render() {
     return (
       <div>
-        <span className="text-success m-3">{this.state.count}</span>
+        <span className= {this.state.textClass}>{this.state.count}</span>
         <button onClick = {() => this.increment() }>Add</button>
       </div>
     );
   }
   increment = () => {
-
-    this.setState({count: ++this.state.count});
+    this.setState({
+      textClass: 'text-success m-3',
+      count: ++this.state.count
+    });
   }
 }
