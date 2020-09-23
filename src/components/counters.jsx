@@ -22,7 +22,6 @@ export default class Counters extends Component {
     );
   }
   handleDelete = (counterId) => {
-    console.log('Delete event called for ', counterId);
     this.setState({
       counters: this.state.counters.filter((counter) => counter.id !== counterId)
     });
