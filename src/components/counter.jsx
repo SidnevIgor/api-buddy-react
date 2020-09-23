@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 export default class Counter extends Component {
   state = {
-    count: this.props.value || 0
+    count: this.props.counter.value || 0
   };
   render() {
     let textClass = 'm-3 bold text-';
@@ -11,7 +11,7 @@ export default class Counter extends Component {
       <div>
         <span className= {textClass}>{this.state.count}</span>
         <button onClick = {() => this.increment() }>Add</button>
-        <button className="btn btn-danger m-2" onClick={() => this.props.onDelete(this.props.id)}>Delete</button>
+        <button className="btn btn-danger m-2" onClick={() => this.props.onDelete(this.props.counter.id)}>Delete</button>
       </div>
     );
   }
