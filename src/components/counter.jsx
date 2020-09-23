@@ -11,6 +11,7 @@ export default class Counter extends Component {
       <div>
         <span className= {textClass}>{this.state.count}</span>
         <button onClick = {() => this.increment() }>Add</button>
+        <button className="btn btn-danger m-2">Delete</button>
       </div>
     );
   }
