@@ -12,7 +12,7 @@ export default class Counters extends Component {
   }
   render() {
     return (
-      <div>
+      <div style={{position: 'relative'}}>
         <button className="btn btn-primary" onClick={() => this.handleReset()}>Reset</button>
         { this.state.counters.map(counter => {
           return (
