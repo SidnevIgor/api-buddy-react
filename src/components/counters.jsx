@@ -15,7 +15,9 @@ export default class Counters extends Component {
       <div>
         { this.state.counters.map(counter => {
           return (
-            <Counter key={counter.id} counter={counter} onDelete={this.handleDelete}/>
+            <Counter key={counter.id} counter={counter}
+              onDelete={this.handleDelete}
+              onIncrement={this.increment}/>
           )
         })}
       </div>
@@ -25,5 +27,8 @@ export default class Counters extends Component {
     this.setState({
       counters: this.state.counters.filter((counter) => counter.id !== counterId)
     });
+  }
+  increment = (counter) => {
+    console.log(counter);
   }
 }
