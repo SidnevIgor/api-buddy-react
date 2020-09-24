@@ -13,12 +13,12 @@ export default class Counters extends Component {
   render() {
     return (
       <div>
+        <button className="btn btn-primary" onClick={() => this.handleReset()}>Reset</button>
         { this.state.counters.map(counter => {
           return (
             <Counter key={counter.id} counter={counter}
               onDelete={this.handleDelete}
-              onIncrement={this.increment}/>
-          )
+              onIncrement={this.handleIncrement}/>)
         })}
       </div>
     );
@@ -28,7 +28,19 @@ export default class Counters extends Component {
       counters: this.state.counters.filter((counter) => counter.id !== counterId)
     });
   }
-  increment = (counter) => {
-    console.log(counter);
+  handleIncrement = (counter) => {
+    let counters = [...this.state.counters];
+    let index = counters.findIndex((item) => item.id === counter.id);
+    counters[index] = {...counter};
+    counters[index].value++;
+    this.setState({counters});
+  }
+  handleReset = () => {
+    let counters = [...this.state.counters];
+    counters = counters.map((counter) => {
+      counter.value=0;
+      return counter;
+    });
+    this.setState({counters});
   }
 }
