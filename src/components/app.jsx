@@ -25,7 +25,6 @@ class App extends Component {
     this.setState({counters});
   }
   handleReset = () => {
-    console.log('The function is run');
     let counters = [...this.state.counters];
     counters = counters.map((counter) => {
       counter.value=0;
