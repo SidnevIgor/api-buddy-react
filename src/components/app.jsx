@@ -25,6 +25,7 @@ class App extends Component {
     this.setState({counters});
   }
   handleReset = () => {
+    console.log('The function is run');
     let counters = [...this.state.counters];
     counters = counters.map((counter) => {
       counter.value=0;
@@ -35,9 +36,16 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header/>
+        <Header
+          totalCounters={this.state.counters.filter((counter) => counter.value > 0).length}
+          />
         <main className="container">
-          <Counters/>
+          <Counters
+            onReset={this.handleReset}
+            onDelete={this.handleDelete}
+            onIncrement={this.handleIncrement}
+            counters={this.state.counters}
+            />
         </main>
       </React.Fragment>
     );

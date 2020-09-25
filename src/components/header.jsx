@@ -6,6 +6,9 @@ class Header extends Component {
     return (
       <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top m-2" style={{position: 'relative'}}>
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
+        <span className="badge badge-pill badge-secondary">
+          {this.props.totalCounters}
+        </span>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <a className="nav-link" >Home <span className="sr-only">(current)</span></a>
