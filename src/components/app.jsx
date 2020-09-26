@@ -37,6 +37,9 @@ class App extends Component {
     super();
     console.log('App constructor');
   }
+  componentDidMount() {
+    console.log('App mounted');
+  }
   render() {
     return (
       <React.Fragment>
