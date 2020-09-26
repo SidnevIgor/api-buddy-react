@@ -32,14 +32,6 @@ class App extends Component {
     });
     this.setState({counters});
   }
-
-  constructor() {
-    super();
-    console.log('App constructor');
-  }
-  componentDidMount() {
-    console.log('App mounted');
-  }
   render() {
     return (
       <React.Fragment>
