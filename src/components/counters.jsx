@@ -10,7 +10,8 @@ export default class Counters extends Component {
           return (
             <Counter key={counter.id} counter={counter}
               onDelete={this.props.onDelete}
-              onIncrement={this.props.onIncrement}/>)
+              onIncrement={this.props.onIncrement}
+              onDecrement={this.props.onDecrement}/>)
         })}
       </div>
     );
