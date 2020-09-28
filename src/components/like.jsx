@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import 'font-awesome/css/font-awesome.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 export default class Like extends Component {
   state = {
@@ -7,7 +8,10 @@ export default class Like extends Component {
   };
   render() {
     return (
-      <i className="far fa-heart"></i>
+      <FontAwesomeIcon icon={ faHeart } style={{ color: this.state.isChosen?"red":"black"}} onClick={() => this.changeColor()}/>
     );
+  }
+  changeColor = () => {
+    this.setState({isChosen: true});
   }
 }
