@@ -7,8 +7,7 @@ export default class Like extends Component {
   };
   render() {
     return (
-      <i className="far fa-heart" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-
-awesome.min.css"></i>
+      <i className="far fa-heart"></i>
     );
   }
 }
