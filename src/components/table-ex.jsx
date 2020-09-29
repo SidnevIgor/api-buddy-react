@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import fetchData from '../services/fetchData';
+import Like from './like';
 
 class Table extends Component {
   state = {
@@ -17,7 +18,7 @@ class Table extends Component {
     return (
     <div>
       <h1>There are {this.state.customers.length} customers</h1>
-      <table style={{width: "700px"}} className="table">
+      <table style={{width: "900px"}} className="table">
         <thead>
           <tr>
             <th scope="col">customerID</th>
@@ -33,6 +34,7 @@ class Table extends Component {
               <td key={i+2}>{customer.firstName}</td>
               <td key={i+3}>{customer.lastName}</td>
               <td key={i+4}>{customer.email}</td>
+              <td><Like/></td>
               <td><button className="btn btn-danger" onClick={() => this.deleteRow(i)}>Delete</button></td>
               </tr>
             )})}

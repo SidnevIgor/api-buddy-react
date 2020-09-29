@@ -12,6 +12,6 @@ export default class Like extends Component {
     );
   }
   changeColor = () => {
-    this.setState({isChosen: true});
+    this.setState({isChosen: this.state.isChosen?false:true});
   }
 }

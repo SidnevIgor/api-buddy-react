@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 
 //import App from './components/app';
-//import Table from './components/table-ex';
+import Table from './components/table-ex';
 //import Counter from './components/counter';
 //import Counters from './components/counters';
-import Like from './components/like';
+//import Like from './components/like';
 
-ReactDOM.render(<Like/>, document.getElementById('root'));
+ReactDOM.render(<Table/>, document.getElementById('root'));
