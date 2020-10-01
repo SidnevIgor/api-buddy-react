@@ -25,8 +25,7 @@ export default class Fetching extends Component {
     this.setState({query: event.target.value})
   }
   handleSubmit = (event) => {
-    //console.log(event);
-    fetchData('customers','GET').then(data => {
+    fetchData(`${this.props.route}`,'GET').then(data => {
       console.log(data);
       this.setState({items: JSON.stringify(data)});
     });
