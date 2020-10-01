@@ -44,7 +44,7 @@ class Table extends Component {
     );
   }
   initComp = () => {
-    fetchData('customers','GET').then(data => {
+    fetchData('auth/customers','GET','', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE').then(data => {
       this.setState({customers: data});
     });
     this.state.isInit = true;
