@@ -9,7 +9,7 @@ export default class Fetching extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Fetch is here!</h1>
+        <h1>{this.props.heading}</h1>
         <input type='text' style={{height: "400px", width: "300px"}} className="m-3"
           value={this.state.query}
           onChange={(event) => this.handleChange(event)}
@@ -25,7 +25,7 @@ export default class Fetching extends Component {
     this.setState({query: event.target.value})
   }
   handleSubmit = (event) => {
-    fetchData(`${this.props.route}`,'GET').then(data => {
+    fetchData(`${this.props.route}`,'GET','',this.props.token).then(data => {
       console.log(data);
       this.setState({items: JSON.stringify(data)});
     });
