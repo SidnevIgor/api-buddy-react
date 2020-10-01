@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import Header from './header.jsx';
 import Counters from './counters.jsx';
+import Fetching from './fetching';
 
 class App extends Component {
   state = {
@@ -52,6 +53,9 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             counters={this.state.counters}
+            />
+          <Fetching
+            route='customers'
             />
         </main>
       </React.Fragment>

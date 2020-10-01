@@ -4,7 +4,7 @@ import fetchData from '../services/fetchData';
 export default class Fetching extends Component {
   state = {
     items: [],
-    query: 'fetch(https://api-buddy.herokuapp.com/api/customers)'
+    query: `fetch(https://api-buddy.herokuapp.com/api/${this.props.route})`
   };
   render() {
     return (
