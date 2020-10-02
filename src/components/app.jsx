@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import Header from './header.jsx';
-import Counters from './counters.jsx';
+//import Counters from './counters.jsx';
 import Fetching from './fetching';
 import Footer from './footer';
 
