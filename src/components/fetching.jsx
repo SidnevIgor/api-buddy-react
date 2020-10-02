@@ -8,17 +8,19 @@ export default class Fetching extends Component {
   };
   render() {
     return (
-      <React.Fragment>
+      <div>
         <h1>{this.props.heading}</h1>
-        <input type='text' style={{height: "400px", width: "300px"}} className="m-3"
-          value={this.state.query}
-          onChange={(event) => this.handleChange(event)}
-          ></input>
-        <input type='text' style={{height: "400px", width: "300px"}} className="m-3"
-          value={this.state.items}
-          onChange={() => {}}></input>
+        <div className="d-flex justify-content-center">
+          <input type='text' style={{height: "400px", width: "300px"}} className="m-5"
+            value={this.state.query}
+            onChange={(event) => this.handleChange(event)}
+            ></input>
+          <input type='text' style={{height: "400px", width: "300px"}} className="m-5"
+            value={this.state.items}
+            onChange={() => {}}></input>
+        </div>
         <input type="submit" value="Fetch data" style={{display: "block"}} className="m-3" onClick={(event)=> this.handleSubmit(event)}/>
-      </React.Fragment>
+      </div>
     );
   }
   handleChange = (event) => {
