@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Header from './header.jsx';
 import Counters from './counters.jsx';
 import Fetching from './fetching';
+import Footer from './footer';
 
 class App extends Component {
   state = {
@@ -64,6 +65,7 @@ class App extends Component {
               heading='Auth protected request'
               token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE '
               />
+            <Footer />
         </main>
       </React.Fragment>
     );
