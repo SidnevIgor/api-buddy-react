@@ -8,7 +8,7 @@ export default class Fetching extends Component {
   };
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>{this.props.heading}</h1>
         <div className="d-flex justify-content-center">
           <input type='text' style={{height: "400px", width: "300px"}} className="m-5"
@@ -19,8 +19,10 @@ export default class Fetching extends Component {
             value={this.state.items}
             onChange={() => {}}></input>
         </div>
-        <input type="submit" value="Fetch data" style={{display: "block"}} className="m-3" onClick={(event)=> this.handleSubmit(event)}/>
-      </div>
+        <div className="d-flex justify-content-center">
+          <input type="submit" value="Fetch data" style={{display: "inline-block"}} className="m-2" onClick={(event)=> this.handleSubmit(event)}/>
+        </div>
+      </React.Fragment>
     );
   }
   handleChange = (event) => {
