@@ -10,7 +10,7 @@ class Header extends Component {
   render() {
     return (
       <div style = {{borderColor: "black", borderStyle: "dashed",width: "100%", height: "700px", display: "inline-block", backgroundColor: "#D3E0E9", fontFamily: "Inter"}}>
-        <div className="inline-container" style={{display: "inline-block", borderStyle: "dashed", width: "60%"}}>
+        <div className="inline-container" style={{display: "inline-block", width: "60%"}}>
           <h1 style={{marginLeft: "180px", marginTop: "50px", fontSize: "90px"}}>API-buddy</h1>
           <p className="lead font-weight-normal" style={{marginLeft: "180px", fontSize: "28px", width:"65%"}}>The service is a free dummy book shop API supporting GET, POST, UPDATE, DELETE requests with the following routes: https://api-buddy/customers</p>
           <a className={this.state.buttonClass}
