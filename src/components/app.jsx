@@ -47,7 +47,7 @@ class App extends Component {
         <Header
           totalCounters={this.state.counters.filter((counter) => counter.value > 0).length}
           />
-        <main className="container">
+
         {/*  <Counters
             onReset={this.handleReset}
             onDelete={this.handleDelete}
@@ -59,14 +59,18 @@ class App extends Component {
           <Fetching
             route='customers'
             heading='Simple request'
+            backgroundClr='#E9EEF2'
+            headingClr='#1C3B4A'
             />
             <Fetching
               route='auth/employees'
               heading='Auth protected request'
-              token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE '
+              token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
+              backgroundClr='#002736'
+              headingClr='#FEFEFE'
               />
             <Footer />
-        </main>
+
       </React.Fragment>
     );
   }

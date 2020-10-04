@@ -10,8 +10,8 @@ export default class Fetching extends Component {
   };
   render() {
     return (
-      <React.Fragment>
-        <h1>{this.props.heading}</h1>
+      <div style={{fontFamily: "Inter", backgroundColor: this.props.backgroundClr}}>
+        <h1 style={{color: this.props.headingClr}}>{this.props.heading}</h1>
         <div className="d-flex justify-content-center">
           <input type='text' style={{height: "400px", width: "300px"}} className="m-5"
             value={this.state.query}
@@ -24,7 +24,7 @@ export default class Fetching extends Component {
         <div className="d-flex justify-content-center">
           <input type="submit" value="Fetch data" style={{display: "inline-block"}} className="m-2" onClick={(event)=> this.handleSubmit(event)}/>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
   handleChange = (event) => {
