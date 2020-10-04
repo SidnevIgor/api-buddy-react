@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+
 import fetchData from '../services/fetchData';
+import './index.css';
 
 export default class Fetching extends Component {
   state = {
