@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Controlled as CodeMirror} from 'react-codemirror2';
 
 import fetchData from '../services/fetchData';
 import './index.css';
@@ -19,12 +20,13 @@ export default class Fetching extends Component {
             className="m-5"
             value={this.state.query}
             onChange={(event) => this.handleChange(event)}
-            ></textarea>
+          ></textarea>
+
           <textarea type='text' style={{height: "400px", width: "300px"}}
             className="m-5"
             value={this.state.items}
             onChange={() => {}}
-            ></textarea>
+          ></textarea>
         </div>
         <div className="d-flex justify-content-center">
           <input type="submit" value="Fetch data"
