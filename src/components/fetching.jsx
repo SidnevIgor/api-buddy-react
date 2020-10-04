@@ -6,7 +6,9 @@ import './index.css';
 export default class Fetching extends Component {
   state = {
     items: [],
-    query: `fetch(https://api-buddy.herokuapp.com/api/${this.props.route})`
+    query: `fetch(https://api-buddy.herokuapp.com/api/${this.props.route})`,
+    mainColor: this.props.backgroundClr,
+    secondaryColor: this.props.headingClr
   };
   render() {
     return (
@@ -25,7 +27,13 @@ export default class Fetching extends Component {
             ></textarea>
         </div>
         <div className="d-flex justify-content-center">
-          <input type="submit" value="Fetch data" style={{display: "inline-block", backgroundColor: this.props.backgroundClr, "borderColor": this.props.headingClr}} className="m-3 btn rounded-pill btn-info" onClick={(event)=> this.handleSubmit(event)}/>
+          <input type="submit" value="Fetch data"
+            style={{display: "inline-block", backgroundColor: this.state.mainColor, borderColor: this.state.secondaryColor, color: this.state.secondaryColor}}
+            className="m-3 btn rounded-pill btn-info"
+            onClick={(event)=> this.handleSubmit(event)}
+            onMouseEnter = {() => this.changeBtn(true)}
+            onMouseLeave = {() => this.changeBtn(false)}
+            />
         </div>
       </div>
     );
@@ -38,5 +46,19 @@ export default class Fetching extends Component {
       console.log(data);
       this.setState({items: JSON.stringify(data)});
     });
+  }
+  changeBtn = (open) => {
+    if(open) {
+      this.setState({
+        mainColor: this.props.headingClr,
+        secondaryColor: this.props.backgroundClr
+      });
+    }
+    else {
+      this.setState({
+        mainColor: this.props.backgroundClr,
+        secondaryColor: this.props.headingClr
+      });
+    }
   }
 }
