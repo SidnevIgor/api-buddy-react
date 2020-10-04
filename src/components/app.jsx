@@ -64,7 +64,7 @@ class App extends Component {
             />
             <Fetching
               route='auth/employees'
-              heading='Auth protected request'
+              heading='Auth-protected request'
               token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
               backgroundClr='#002736'
               headingClr='#FEFEFE'

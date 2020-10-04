@@ -11,18 +11,21 @@ export default class Fetching extends Component {
   render() {
     return (
       <div style={{fontFamily: "Inter", backgroundColor: this.props.backgroundClr}}>
-        <h1 style={{color: this.props.headingClr}}>{this.props.heading}</h1>
+        <h1 style={{color: this.props.headingClr}} className="p-5">{this.props.heading}</h1>
         <div className="d-flex justify-content-center">
-          <input type='text' style={{height: "400px", width: "300px"}} className="m-5"
+          <textarea type='text' style={{height: "400px", width: "300px" }}
+            className="m-5"
             value={this.state.query}
             onChange={(event) => this.handleChange(event)}
-            ></input>
-          <input type='text' style={{height: "400px", width: "300px"}} className="m-5"
+            ></textarea>
+          <textarea type='text' style={{height: "400px", width: "300px"}}
+            className="m-5"
             value={this.state.items}
-            onChange={() => {}}></input>
+            onChange={() => {}}
+            ></textarea>
         </div>
         <div className="d-flex justify-content-center">
-          <input type="submit" value="Fetch data" style={{display: "inline-block"}} className="m-2" onClick={(event)=> this.handleSubmit(event)}/>
+          <input type="submit" value="Fetch data" style={{display: "inline-block"}} className="m-2 btn-primary" onClick={(event)=> this.handleSubmit(event)}/>
         </div>
       </div>
     );
