@@ -48,8 +48,8 @@ export default class Fetching extends Component {
   }
   handleSubmit = (event) => {
     fetchData(`${this.props.route}`,'GET','',this.props.token).then(data => {
-      console.log(data);
-      this.setState({items: JSON.stringify(data)});
+      let itemsStr = data.map((item) => JSON.stringify(item) + "\n");
+      this.setState({items: itemsStr});
     });
   }
   changeBtn = (open) => {
