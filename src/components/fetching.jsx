@@ -16,6 +16,7 @@ export default class Fetching extends Component {
       <div style={{fontFamily: "Inter", backgroundColor: this.props.backgroundClr}}>
         <h1 style={{color: this.props.headingClr}} className="p-5">{this.props.heading}</h1>
         <div className="d-flex justify-content-center">
+          
           <textarea type='text' style={{height: "400px", width: "300px" }}
             className="m-5"
             value={this.state.query}
@@ -27,6 +28,7 @@ export default class Fetching extends Component {
             value={this.state.items}
             onChange={() => {}}
           ></textarea>
+
         </div>
         <div className="d-flex justify-content-center">
           <input type="submit" value="Fetch data"
