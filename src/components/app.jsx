@@ -4,6 +4,7 @@ import Header from './header.jsx';
 //import Counters from './counters.jsx';
 import Fetching from './fetching';
 import Footer from './footer';
+import Code from './codeMirror';
 
 class App extends Component {
   state = {
@@ -70,7 +71,7 @@ class App extends Component {
               headingClr='#FEFEFE'
               />
             <Footer />
-
+            <Code />
       </React.Fragment>
     );
   }

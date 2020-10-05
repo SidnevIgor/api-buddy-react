@@ -2,3 +2,5 @@
   font-family: 'Inter';
   src: local('Inter'), url('./fonts/Inter/static/Inter-SemiBold-slnt=0.ttf') format('ttf');
 }
+@import './fonts/codemirror/lib/codemirror.css';
+@import './fonts/codemirror/theme/material.css';
