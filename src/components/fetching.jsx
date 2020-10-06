@@ -59,8 +59,10 @@ export default class Fetching extends Component {
       let addClosingBraces = moreLines.toString().split('}');
       let againMoreLines = addClosingBraces.join('\n}');
 
-      console.log(againMoreLines);
-      this.setState({items: againMoreLines});
+      let finalArr = againMoreLines.slice(1, againMoreLines.length);
+
+      console.log(finalArr);
+      this.setState({items: finalArr});
     });
   }
   changeBtn = (open) => {
