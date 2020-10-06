@@ -48,21 +48,15 @@ export default class Fetching extends Component {
   }
   handleSubmit = (event) => {
     fetchData(`${this.props.route}`,'GET','',this.props.token).then(data => {
-      let itemsStr = data.map((item) => "\n" + JSON.stringify(item));
-
-      let splitArr = itemsStr.toString().split(',"');
-      let addedLines = splitArr.join(',\n   "');
-
-      let addGapsInBraces = addedLines.toString().split('{');
-      let moreLines = addGapsInBraces.join('{\n   ');
-
-      let addClosingBraces = moreLines.toString().split('}');
-      let againMoreLines = addClosingBraces.join('\n}');
-
-      let finalArr = againMoreLines.slice(1, againMoreLines.length);
-
-      console.log(finalArr);
-      this.setState({items: finalArr});
+      let itemsStr = '[' + data.map((item) => "\n" + JSON.stringify(item))
+          .toString().split(',"')
+          .join(',\n   "')
+          .toString().split('{')
+          .join('{\n   ')
+          .toString().split('}')
+          .join('\n}')
+          .slice(1, this.length) + ']';
+      this.setState({items: itemsStr});
     });
   }
   changeBtn = (open) => {
