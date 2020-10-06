@@ -51,9 +51,16 @@ export default class Fetching extends Component {
       let itemsStr = data.map((item) => "\n" + JSON.stringify(item));
 
       let splitArr = itemsStr.toString().split(',"');
-      let addedLines = splitArr.join(',\n"');
-      console.log(addedLines);
-      this.setState({items: addedLines});
+      let addedLines = splitArr.join(',\n   "');
+
+      let addGapsInBraces = addedLines.toString().split('{');
+      let moreLines = addGapsInBraces.join('{\n   ');
+
+      let addClosingBraces = moreLines.toString().split('}');
+      let againMoreLines = addClosingBraces.join('\n}');
+
+      console.log(againMoreLines);
+      this.setState({items: againMoreLines});
     });
   }
   changeBtn = (open) => {
