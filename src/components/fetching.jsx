@@ -16,14 +16,14 @@ export default class Fetching extends Component {
         <h1 style={{color: this.props.headingClr}} className="p-5">{this.props.heading}</h1>
         <div className="d-flex justify-content-center">
 
-          <textarea type='text' style={{height: "400px", width: "500px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr}}
+          <textarea type='text' style={{height: "400px", width: "500px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none"}}
             data-gramm_editor="false"
             className="m-5"
             value={this.state.query}
             onChange={(event) => this.handleChange(event)}
           ></textarea>
 
-          <textarea type='text' style={{height: "400px", width: "500px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr}}
+        <textarea type='text' style={{height: "400px", width: "500px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none"}}
             data-gramm_editor="false"
             className="m-5"
             value={this.state.items}

@@ -7,7 +7,6 @@ export default class Footer extends Component {
   render () {
     return (
       <React.Fragment>
-        <h1>Follow me</h1>
         <FontAwesomeIcon icon={ faLinkedin } style={{color: "grey", width: "50px", height: "50px"}}/>
         <FontAwesomeIcon icon={ faFacebookSquare } style={{color: "grey", width: "50px", height: "50px"}}/>
       </React.Fragment>
