@@ -8,9 +8,9 @@ export default class Footer extends Component {
     return (
       <div style = {{backgroundColor: "#002736", textAlign: "right"}}>
         <a src = { require("./images/footer_linkedin.png")} alt="LinkedIn page" width="40" height="40"
-          href="window.location='https://www.linkedin.com/in/igor-sidnev/'" value="Click here"/>
+          href="https://www.linkedin.com/in/igor-sidnev/">LinkedIn</a>
         <a src = { require("./images/footer_facebook.png")} alt="Facebook page" width="40" height="40"
-          href="window.location='https://www.facebook.com/profile.php?id=100006233297824'"/>
+          href="https://www.facebook.com/profile.php?id=100006233297824">Facebook</a>
       </div>
     )
   }
