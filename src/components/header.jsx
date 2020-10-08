@@ -4,6 +4,11 @@ import React, { Component } from 'react';
 import './index.css';
 
 class Header extends Component {
+  constructor() {
+    super();
+    this.runAnimation()
+  }
+
   state = {
     buttonClass: "btn btn-outline-secondary",
     routes: [
@@ -13,7 +18,8 @@ class Header extends Component {
       'orders',
       'stores'
     ],
-    chosenRoute: 'customers'
+    chosenRoute: 'customers',
+    iterator: 0
   };
   render() {
     return (
@@ -43,6 +49,16 @@ class Header extends Component {
         buttonClass: "btn btn-outline-secondary"
       })
     }
+  }
+  runAnimation = () => {
+    setInterval(() => {
+      this.state.iterator = (this.state.iterator + 1) % this.state.routes.length;
+      this.state.chosenRoute = this.state.routes[this.state.iterator];
+      this.setState({
+        iterator: this.state.iterator,
+        chosenRoute: this.state.chosenRoute
+      });
+    }, 2000)
   }
 }
 export default Header;
