@@ -5,22 +5,26 @@ export default class RoutesDisplay extends Component {
     return (
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px", textAlign: "center"}}>
         <h1>Available routes</h1>
-        <table style={{width: "500px", borderStyle: "solid", textAlign: "left"}}>
+        <table style={{width: "500px", borderStyle: "solid", textAlign: "left"}} className="m-5">
           <tr>
-            <td rowspan="5">https://api-buddy</td>
-            <td>/customers</td>
+            <td className="p-3"></td>
+            <td className="p-3">/customers</td>
           </tr>
           <tr>
-            <td>/employees</td>
+            <td></td>
+            <td className="p-3">/employees</td>
           </tr>
           <tr>
-            <td>/stores</td>
+            <td>https://api-buddy</td>
+            <td className="p-3">/stores</td>
           </tr>
           <tr>
-            <td>/books</td>
+            <td></td>
+            <td className="p-3">/books</td>
           </tr>
           <tr>
-            <td>/orders</td>
+            <td></td>
+            <td className="p-3">/orders</td>
           </tr>
         </table>
       </div>
