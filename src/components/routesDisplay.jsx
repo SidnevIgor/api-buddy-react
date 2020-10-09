@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 export default class RoutesDisplay extends Component {
   render() {
     return (
-      <h1>Routes Display component</h1>
+      <div>
+        <h1>Available routes</h1>
+      </div>
     )
   }
 }
