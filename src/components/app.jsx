@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Header from './header.jsx';
+import RoutesDisplay from './routesDisplay';
 //import Counters from './counters.jsx';
 import Fetching from './fetching';
 import Footer from './footer';
@@ -47,6 +48,7 @@ class App extends Component {
         <Header
           totalCounters={this.state.counters.filter((counter) => counter.value > 0).length}
           />
+        <RoutesDisplay/>
 
         {/*  <Counters
             onReset={this.handleReset}
