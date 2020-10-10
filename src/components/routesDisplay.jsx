@@ -5,28 +5,30 @@ export default class RoutesDisplay extends Component {
     return (
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px", textAlign: "center"}}>
         <h1>Available routes</h1>
-        <table style={{width: "500px", borderStyle: "solid", textAlign: "left"}} className="m-5">
-          <tr>
-            <td className="p-3"></td>
-            <td className="p-3">/customers</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td className="p-3">/employees</td>
-          </tr>
-          <tr>
-            <td>https://api-buddy</td>
-            <td className="p-3">/stores</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td className="p-3">/books</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td className="p-3">/orders</td>
-          </tr>
-        </table>
+        <div style={{width: "100%", textAlign: "center", borderStyle: "dashed"}}>
+          <table style={{width: "21%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px"}} className="m-5">
+            <tr>
+              <td className="p-3"></td>
+              <td className="p-3">/customers</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td className="p-3">/employees</td>
+            </tr>
+            <tr>
+              <td>https://api-buddy</td>
+              <td className="p-3">/stores</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td className="p-3">/books</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td className="p-3">/orders</td>
+            </tr>
+          </table>
+        </div>
       </div>
     )
   }
