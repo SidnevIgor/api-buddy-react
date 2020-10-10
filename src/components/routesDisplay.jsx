@@ -7,26 +7,28 @@ export default class RoutesDisplay extends Component {
         <h1>Available routes</h1>
         <div style={{width: "100%", textAlign: "center", borderStyle: "dashed"}}>
           <table style={{width: "21%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px", color: "#314C5B"}} className="m-5">
-            <tr>
-              <td className="p-3"></td>
-              <td className="p-3">/customers</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td className="p-3">/employees</td>
-            </tr>
-            <tr>
-              <td>https://api-buddy</td>
-              <td className="p-3">/stores</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td className="p-3">/books</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td className="p-3">/orders</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td id = "row11"></td>
+                <td className = "p-3" id = "row12">/customers</td>
+              </tr>
+              <tr>
+                <td id = "row21"></td>
+                <td className = "p-3" id = "row22">/employees</td>
+              </tr>
+              <tr>
+                <td id = "row31">https://api-buddy</td>
+                <td className = "p-3" id = "row32">/stores</td>
+              </tr>
+              <tr>
+                <td id = "row41"></td>
+                <td className = "p-3" id = "row42">/books</td>
+              </tr>
+              <tr>
+                <td id = "row51"></td>
+                <td className = "p-3" id = "row52">/orders</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
