@@ -10,23 +10,23 @@ export default class RoutesDisplay extends Component {
             <tbody>
               <tr>
                 <td className = "reqList" id = "row11"></td>
-                <td className = "p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/customers</td>
+                <td className = "reqOption p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/customers</td>
               </tr>
               <tr>
                 <td className = "reqList" id = "row21"></td>
-                <td className = "p-3" id = "row22" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/employees</td>
+                <td className = "reqOption p-3" id = "row22" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/employees</td>
               </tr>
               <tr>
                 <td className = "reqList" id = "row31">https://api-buddy</td>
-                <td className = "p-3" id = "row32" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/stores</td>
+                <td className = "reqOption p-3" id = "row32" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/stores</td>
               </tr>
               <tr>
                 <td className = "reqList" id = "row41"></td>
-                <td className = "p-3" id = "row42" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/books</td>
+                <td className = "reqOption p-3" id = "row42" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/books</td>
               </tr>
               <tr>
                 <td className = "reqList" id = "row51"></td>
-                <td className = "p-3" id = "row52" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/orders</td>
+                <td className = "reqOption p-3" id = "row52" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/orders</td>
               </tr>
             </tbody>
           </table>
@@ -35,11 +35,15 @@ export default class RoutesDisplay extends Component {
     )
   }
   changeLine = (id) => {
+    /*Cleaning state*/
     let list = document.getElementsByClassName('reqList');
+    let options = document.getElementsByClassName('reqOption');
     for(let i = 0; i < list.length; i++) {
       list[i].textContent = '';
       list[i].style.color = "#314C5B";
+      options[i].style.color = "#314C5B";
     }
+    /*Setting new style*/
     let chosenEl = document.getElementById(id);
     console.log('Chosen element ', chosenEl);
     let whereToMove = document.getElementById('row'+id[id.length-2]+'1');
@@ -47,5 +51,8 @@ export default class RoutesDisplay extends Component {
     whereToMove.textContent = 'https://api-buddy';
     whereToMove.style.color = "#E18026";
     whereToMove.style.transition = "1s";
+
+    chosenEl.style.color = "#E18026";
+    chosenEl.style.transition = "1s";
   }
 }
