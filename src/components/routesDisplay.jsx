@@ -9,24 +9,24 @@ export default class RoutesDisplay extends Component {
           <table style={{width: "21%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px", color: "#314C5B"}} className="m-5" id = "mainTable">
             <tbody>
               <tr>
-                <td id = "row11"></td>
+                <td className = "reqList" id = "row11"></td>
                 <td className = "p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/customers</td>
               </tr>
               <tr>
-                <td id = "row21"></td>
-                <td className = "p-3" id = "row22">/employees</td>
+                <td className = "reqList" id = "row21"></td>
+                <td className = "p-3" id = "row22" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/employees</td>
               </tr>
               <tr>
-                <td id = "row31">https://api-buddy</td>
-                <td className = "p-3" id = "row32">/stores</td>
+                <td className = "reqList" id = "row31">https://api-buddy</td>
+                <td className = "p-3" id = "row32" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/stores</td>
               </tr>
               <tr>
-                <td id = "row41"></td>
-                <td className = "p-3" id = "row42">/books</td>
+                <td className = "reqList" id = "row41"></td>
+                <td className = "p-3" id = "row42" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/books</td>
               </tr>
               <tr>
-                <td id = "row51"></td>
-                <td className = "p-3" id = "row52">/orders</td>
+                <td className = "reqList" id = "row51"></td>
+                <td className = "p-3" id = "row52" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/orders</td>
               </tr>
             </tbody>
           </table>
@@ -35,8 +35,17 @@ export default class RoutesDisplay extends Component {
     )
   }
   changeLine = (id) => {
-    let table = document.getElementById('mainTable');
-    console.log('Full table ', table);
-    console.log('The id ', id);
+    let list = document.getElementsByClassName('reqList');
+    for(let i = 0; i < list.length; i++) {
+      list[i].textContent = '';
+      list[i].style.color = "#314C5B";
+    }
+    let chosenEl = document.getElementById(id);
+    console.log('Chosen element ', chosenEl);
+    let whereToMove = document.getElementById('row'+id[id.length-2]+'1');
+    console.log('Where to ', whereToMove);
+    whereToMove.textContent = 'https://api-buddy';
+    whereToMove.style.color = "#E18026";
+    whereToMove.style.transition = "1s";
   }
 }
