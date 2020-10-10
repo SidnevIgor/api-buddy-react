@@ -6,11 +6,11 @@ export default class RoutesDisplay extends Component {
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px", textAlign: "center"}}>
         <h1>Available routes</h1>
         <div style={{width: "100%", textAlign: "center", borderStyle: "dashed"}}>
-          <table style={{width: "21%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px", color: "#314C5B"}} className="m-5">
+          <table style={{width: "21%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px", color: "#314C5B"}} className="m-5" id = "mainTable">
             <tbody>
               <tr>
                 <td id = "row11"></td>
-                <td className = "p-3" id = "row12">/customers</td>
+                <td className = "p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/customers</td>
               </tr>
               <tr>
                 <td id = "row21"></td>
@@ -33,5 +33,10 @@ export default class RoutesDisplay extends Component {
         </div>
       </div>
     )
+  }
+  changeLine = (id) => {
+    let table = document.getElementById('mainTable');
+    console.log('Full table ', table);
+    console.log('The id ', id);
   }
 }
