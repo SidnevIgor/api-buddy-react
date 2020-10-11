@@ -31,7 +31,7 @@ export default class RoutesDisplay extends Component {
             </tbody>
           </table>
           <div style = {{width: "300px", height: "360px", borderStyle: "dashed", display: "inline-block"}}>
-            <h2 style = {{position: "absolute", marginLeft: "auto", marginRight: "auto"}}>New model</h2>
+            <h2 style = {{position: "absolute"}}>New model</h2>
           </div>
         </div>
       </div>
