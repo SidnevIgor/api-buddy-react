@@ -30,7 +30,7 @@ export default class RoutesDisplay extends Component {
               </tr>
             </tbody>
           </table>
-          <div style = {{width: "200px", height: "200px", borderStyle: "dashed", display: "inline-block"}}>
+          <div style = {{width: "300px", height: "300px", borderStyle: "dashed", display: "inline-block"}}>
 
           </div>
         </div>
