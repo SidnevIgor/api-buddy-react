@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 
 export default class RoutesDisplay extends Component {
   state = {
-    chosenModel: 'Store'
+    chosenModel: 'Store',
+    modelDesc: {
+    "storeId": 1,
+    "city": "New York",
+    "street": "Nelson",
+    "building": "24A",
+    "postcode": "10030",
+    "employees": [ 1, 2, 3 ]
+    }
   }
   render() {
     return (
@@ -35,6 +43,9 @@ export default class RoutesDisplay extends Component {
           </table>
           <div style = {{width: "400px",height: "360px", borderStyle: "dashed", display: "inline-block"}}>
             <h2 style = {{position: "absolute"}}>{this.state.chosenModel} model example</h2>
+            <textarea style = {{position: "relative", height: "300px", width: "200px", resize: "none", marginTop: "50px"}}>
+              {JSON.stringify(this.state.modelDesc)}
+            </textarea>
           </div>
         </div>
       </div>
