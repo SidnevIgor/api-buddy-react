@@ -42,8 +42,9 @@ export default class RoutesDisplay extends Component {
           </table>
           <div style = {{width: "400px",height: "360px", borderStyle: "dashed", display: "inline-block"}}>
             <h2 style = {{position: "absolute"}}>{this.state.chosenModel} model example</h2>
-            <textarea style = {{position: "relative", height: "300px", width: "200px", resize: "none", marginTop: "50px"}} value = {JSON.stringify(this.state.modelDesc)} onChange = {() => {}}>
-            </textarea>
+            <p style = {{position: "absolute", height: "300px", width: "100px", resize: "none", marginTop: "50px"}}>
+              {JSON.stringify(this.state.modelDesc)}
+            </p>
           </div>
         </div>
       </div>
