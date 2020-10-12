@@ -9,7 +9,7 @@ export default function getModel(chosenModel) {
         "postcode": "10030",
         "employees": [ 1, 2, 3 ]
       };
-      break;
+
     case 'Book':
       return {
         "bookId": 1,
@@ -21,7 +21,7 @@ export default function getModel(chosenModel) {
         "publisher": "Oyope",
         "imageUrl": "http://picsum.photos/id/100/200"
       };
-      break;
+
     case 'Customer':
       return {
         "customerId": 1,
@@ -31,7 +31,7 @@ export default function getModel(chosenModel) {
         "tel": "266-846-9674",
         "password": "zKEEMj"
      };
-     break;
+
     case 'Employee':
       return {
         "employeeId": 1,
@@ -40,7 +40,7 @@ export default function getModel(chosenModel) {
         "storeId": 1,
         "position": "consultant"
       };
-      break;
+
     case 'Order':
       return {
         "orderId": 1,
@@ -50,6 +50,6 @@ export default function getModel(chosenModel) {
     "orderTotal": 428,
     "books": [1, 2, 4]
       };
-      break;
+      
   }
 }

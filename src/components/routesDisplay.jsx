@@ -42,7 +42,7 @@ export default class RoutesDisplay extends Component {
           </table>
           <div style = {{width: "400px",height: "360px", borderStyle: "dashed", display: "inline-block"}}>
             <h2 style = {{position: "absolute"}}>{this.state.chosenModel} model example</h2>
-            <textarea style = {{position: "relative", height: "300px", width: "200px", resize: "none", marginTop: "50px"}} defaultValue = {JSON.stringify(this.state.modelDesc)}>
+            <textarea style = {{position: "relative", height: "300px", width: "200px", resize: "none", marginTop: "50px"}} value = {JSON.stringify(this.state.modelDesc)} onChange = {() => {}}>
             </textarea>
           </div>
         </div>
@@ -62,7 +62,8 @@ export default class RoutesDisplay extends Component {
     let chosenEl = document.getElementById(id);
     let whereToMove = document.getElementById('row'+id[id.length-2]+'1');
     this.setState({
-      chosenModel: this.changeChosenModel(id)
+      chosenModel: this.changeChosenModel(id),
+      modelDesc: getRoute(this.changeChosenModel(id))
     });
 
     whereToMove.textContent = 'https://api-buddy';
@@ -76,23 +77,21 @@ export default class RoutesDisplay extends Component {
     switch(id) {
       case 'row12':
       return 'Customer';
-      break;
 
       case 'row22':
       return 'Employee';
-      break;
 
       case 'row32':
       return 'Store';
-      break;
 
       case 'row42':
       return 'Book';
-      break;
 
       case 'row52':
       return 'Order';
-      break;
+
+      default:
+      return 'Store'
     }
   }
 }
