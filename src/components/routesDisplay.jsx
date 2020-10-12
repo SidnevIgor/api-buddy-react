@@ -15,9 +15,9 @@ export default class RoutesDisplay extends Component {
     return (
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px"}}>
         <h1>Available routes</h1>
-        <div style={{width: "100%", borderStyle: "dashed"}}>
-          <div className = "table-container" style = {{display: "inline-block", width: "30%", marginLeft: "30%"}}>
-            <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "20px", color: "#314C5B"}} className="m-5" id = "mainTable">
+        <div style = {{width: "100%", borderStyle: "dashed"}}>
+          <div className = "table-container" style = {{display: "inline-block", width: "30%", marginLeft: "40%"}}>
+            <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "20px", color: "#314C5B" }} id = "mainTable">
               <tbody>
                 <tr>
                   <td className = "reqList p-3" id = "row11"></td>
