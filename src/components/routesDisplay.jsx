@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import getRoute from './models/models';
+import pretifyCode from '../services/pretifyCode';
 
 export default class RoutesDisplay extends Component {
   state = {
@@ -9,7 +10,7 @@ export default class RoutesDisplay extends Component {
   }
   constructor() {
     super();
-    this.state.modelDesc = getRoute(this.state.chosenModel)
+    this.state.modelDesc = getRoute(this.state.chosenModel);
   }
   render() {
     return (

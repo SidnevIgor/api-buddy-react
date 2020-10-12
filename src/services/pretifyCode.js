@@ -9,4 +9,7 @@ export default function pretifyCode(obj, data) {
         .join('\n}')
         .slice(1, obj.length) + ']';
   }
+  else {
+    console.log(data);
+  }
 }
