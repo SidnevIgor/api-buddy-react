@@ -40,9 +40,9 @@ export default class RoutesDisplay extends Component {
               </tr>
             </tbody>
           </table>
-          <div style = {{width: "400px",height: "360px", borderStyle: "dashed", display: "inline-block"}}>
-            <h2 style = {{position: "absolute"}}>{this.state.chosenModel} model example</h2>
-            <p style = {{position: "absolute", height: "300px", width: "100px", resize: "none", marginTop: "50px"}}>
+          <div style = {{width: "400px", minHeight: "360px", border: " 5px solid #840032", display: "inline-block"}}>
+            <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}}>{this.state.chosenModel} model example</h3>
+            <p style = {{position: "absolute", width: "100px", resize: "none", marginTop: "50px"}}>
               {JSON.stringify(this.state.modelDesc)}
             </p>
           </div>
