@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import fetchData from '../services/fetchData';
+import pretifyCode from '../services/pretifyCode';
 import './index.css';
 
 export default class Fetching extends Component {
@@ -48,15 +49,7 @@ export default class Fetching extends Component {
   }
   handleSubmit = (event) => {
     fetchData(`${this.props.route}`,'GET','',this.props.token).then(data => {
-      let itemsStr = '[' + data.map((item) => "\n" + JSON.stringify(item))
-          .toString().split(',"')
-          .join(',\n   "')
-          .toString().split('{')
-          .join('{\n   ')
-          .toString().split('}')
-          .join('\n}')
-          .slice(1, this.length) + ']';
-
+      let itemsStr = pretifyCode(this, data);
       this.setState({items: itemsStr});
     });
   }

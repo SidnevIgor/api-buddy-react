@@ -18,7 +18,7 @@ export default class RoutesDisplay extends Component {
         <div style = {{width: "100%", borderStyle: "dashed"}}>
           <div className = "table-container" style = {{display: "inline-block", width: "30%", marginLeft: "40%"}}>
             <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "20px", color: "#314C5B" }} id = "mainTable">
-              <tbody>
+              <tbody className = "m-0">
                 <tr>
                   <td className = "reqList p-3" id = "row11"></td>
                   <td className = "reqOption p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/customers</td>
