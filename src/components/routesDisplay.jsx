@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
+import getRoute from './models/models';
+
 export default class RoutesDisplay extends Component {
   state = {
     chosenModel: 'Store',
-    modelDesc: {
-    "storeId": 1,
-    "city": "New York",
-    "street": "Nelson",
-    "building": "24A",
-    "postcode": "10030",
-    "employees": [ 1, 2, 3 ]
-    }
+    modelDesc: {}
+  }
+  constructor() {
+    super();
+    this.state.modelDesc = getRoute(this.state.chosenModel)
   }
   render() {
     return (
@@ -43,8 +42,7 @@ export default class RoutesDisplay extends Component {
           </table>
           <div style = {{width: "400px",height: "360px", borderStyle: "dashed", display: "inline-block"}}>
             <h2 style = {{position: "absolute"}}>{this.state.chosenModel} model example</h2>
-            <textarea style = {{position: "relative", height: "300px", width: "200px", resize: "none", marginTop: "50px"}}>
-              {JSON.stringify(this.state.modelDesc)}
+            <textarea style = {{position: "relative", height: "300px", width: "200px", resize: "none", marginTop: "50px"}} defaultValue = {JSON.stringify(this.state.modelDesc)}>
             </textarea>
           </div>
         </div>
