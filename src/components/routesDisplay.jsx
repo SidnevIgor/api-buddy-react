@@ -13,10 +13,10 @@ export default class RoutesDisplay extends Component {
   }
   render() {
     return (
-      <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px", textAlign: "center"}}>
+      <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px"}}>
         <h1>Available routes</h1>
-        <div style={{width: "100%", textAlign: "center", borderStyle: "dashed"}}>
-          <table style={{width: "23%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px", color: "#314C5B"}} className="m-5" id = "mainTable">
+        <div style={{width: "100%", borderStyle: "dashed"}}>
+          <table style={{width: "23%", borderStyle: "solid", textAlign: "left", display: "inline-block", fontSize: "20px", color: "#314C5B", marginLeft: "700px"}} className="m-5" id = "mainTable">
             <tbody>
               <tr>
                 <td className = "reqList p-3" id = "row11"></td>
@@ -40,7 +40,7 @@ export default class RoutesDisplay extends Component {
               </tr>
             </tbody>
           </table>
-          <div style = {{width: "400px", minHeight: "360px", border: " 5px solid #840032", display: "inline-block"}}>
+          <div style = {{width: "400px", minHeight: "360px", border: " 5px solid #840032", display: "inline-block", position: "relative"}}>
             <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}}>{this.state.chosenModel} model example</h3>
             <p style = {{position: "absolute", width: "100px", resize: "none", marginTop: "50px"}}>
               {JSON.stringify(this.state.modelDesc)}
