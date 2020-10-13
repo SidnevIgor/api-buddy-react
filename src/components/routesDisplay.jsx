@@ -70,6 +70,7 @@ export default class RoutesDisplay extends Component {
       chosenModel: this.changeChosenModel(id),
       modelDesc: pretifyCode({},getRoute(this.changeChosenModel(id)))
     });
+    console.log(this.state.modelDesc);
 
     whereToMove.textContent = 'https://api-buddy';
     whereToMove.style.color = "#E18026";
