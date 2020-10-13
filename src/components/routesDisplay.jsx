@@ -11,6 +11,7 @@ export default class RoutesDisplay extends Component {
   constructor() {
     super();
     this.state.modelDesc = getRoute(this.state.chosenModel);
+    pretifyCode({}, getRoute(this.state.chosenModel));
   }
   render() {
     return (

@@ -10,6 +10,6 @@ export default function pretifyCode(obj, data) {
         .slice(1, obj.length) + ']';
   }
   else {
-    console.log(data);
+    console.log(JSON.stringify(data));
   }
 }
