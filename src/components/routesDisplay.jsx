@@ -10,8 +10,7 @@ export default class RoutesDisplay extends Component {
   }
   constructor() {
     super();
-    this.state.modelDesc = getRoute(this.state.chosenModel);
-    pretifyCode({}, getRoute(this.state.chosenModel));
+    this.state.modelDesc = (pretifyCode({},getRoute(this.state.chosenModel)));
   }
   render() {
     return (
@@ -48,7 +47,7 @@ export default class RoutesDisplay extends Component {
           <div style = {{width: "400px", minHeight: "360px", border: " 5px solid #840032", display: "inline-block", position: "relative"}}>
             <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">{this.state.chosenModel} model example</h3>
             <p style = {{position: "absolute", width: "100px", resize: "none", marginTop: "50px"}}>
-              {JSON.stringify(this.state.modelDesc)}
+              {(this.state.modelDesc)}
             </p>
           </div>
         </div>
@@ -69,7 +68,7 @@ export default class RoutesDisplay extends Component {
     let whereToMove = document.getElementById('row'+id[id.length-2]+'1');
     this.setState({
       chosenModel: this.changeChosenModel(id),
-      modelDesc: getRoute(this.changeChosenModel(id))
+      modelDesc: pretifyCode({},getRoute(this.changeChosenModel(id)))
     });
 
     whereToMove.textContent = 'https://api-buddy';
