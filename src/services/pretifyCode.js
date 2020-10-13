@@ -10,6 +10,7 @@ export default function pretifyCode(obj, data) {
         .slice(1, obj.length) + ']';
   }
   else {
-    console.log(JSON.stringify(data));
+    let tst = '{\n' + JSON.stringify(data).slice(1,data.length-2).toString() + '\n}';
+    console.log(tst);
   }
 }
