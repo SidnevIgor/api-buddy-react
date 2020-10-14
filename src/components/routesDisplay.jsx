@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import getRoute from './models/models';
 import pretifyCode from '../services/pretifyCode';
+import './animations/routesDisplayAnimation.css';
 
 export default class RoutesDisplay extends Component {
   state = {
@@ -16,9 +18,9 @@ export default class RoutesDisplay extends Component {
     return (
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px"}}>
         <h1>Available routes</h1>
-        <div style = {{width: "100%", borderStyle: "dashed"}}>
+        <div style = {{ width: "100%", borderStyle: "dashed" }}>
           <div className = "table-container" style = {{display: "inline-block", width: "40%", marginLeft: "25%"}}>
-            <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "30px", color: "#314C5B" }} id = "mainTable">
+            <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "27px", color: "#314C5B" }} id = "mainTable">
               <tbody>
                 <tr>
                   <td className = "reqList p-3" id = "row11"></td>
@@ -47,11 +49,17 @@ export default class RoutesDisplay extends Component {
           <div style = {{width: "35%", minHeight: "390px", border: " 5px #840032", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
             <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">     {this.state.chosenModel} model example
             </h3>
-            <textarea style = {{position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none", fontSize: "20px"}}
-              value = {this.state.modelDesc}
-              onChange = {() => {}}
-            >
-            </textarea>
+            <CSSTransition
+              in
+              classNames = 'fade'
+              timeout = {1000}
+              appear = {true}
+              >
+              <textarea style = {{ position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none", fontSize: "20px"}}
+                value = {this.state.modelDesc}
+                onChange = {() => {}}>
+              </textarea>
+            </CSSTransition>
           </div>
         </div>
       </div>
@@ -73,7 +81,6 @@ export default class RoutesDisplay extends Component {
       chosenModel: this.changeChosenModel(id),
       modelDesc: pretifyCode({},getRoute(this.changeChosenModel(id)))
     });
-    console.log(this.state.modelDesc);
 
     whereToMove.textContent = 'https://api-buddy';
     whereToMove.style.color = "#E18026";
