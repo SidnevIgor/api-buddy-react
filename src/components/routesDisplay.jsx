@@ -47,9 +47,11 @@ export default class RoutesDisplay extends Component {
           <div style = {{width: "400px", minHeight: "360px", border: " 5px solid #840032", display: "inline-block", position: "relative"}}>
             <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">     {this.state.chosenModel} model example
             </h3>
-            <p style = {{position: "absolute", width: "100px", resize: "none", marginTop: "50px", whiteSpace: "pre-line"}}>
-              {(this.state.modelDesc)}
-            </p>
+            <textarea style = {{position: "absolute", width: "380px", minHeight: "300px", resize: "none", marginTop: "50px", whiteSpace: "pre-line"}}
+              value = {this.state.modelDesc}
+              onChange = {() => {}}
+            >
+            </textarea>
           </div>
         </div>
       </div>
