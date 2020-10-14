@@ -17,9 +17,9 @@ export default class RoutesDisplay extends Component {
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "600px"}}>
         <h1>Available routes</h1>
         <div style = {{width: "100%", borderStyle: "dashed"}}>
-          <div className = "table-container" style = {{display: "inline-block", width: "30%", marginLeft: "20%"}}>
-            <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "20px", color: "#314C5B" }} id = "mainTable">
-              <tbody className = "m-0">
+          <div className = "table-container" style = {{display: "inline-block", width: "40%", marginLeft: "25%"}}>
+            <table style={{ borderStyle: "solid", textAlign: "left", fontSize: "30px", color: "#314C5B" }} id = "mainTable">
+              <tbody>
                 <tr>
                   <td className = "reqList p-3" id = "row11"></td>
                   <td className = "reqOption p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine('row12')}}>/customers</td>
@@ -44,10 +44,10 @@ export default class RoutesDisplay extends Component {
             </table>
           </div>
 
-          <div style = {{width: "400px", minHeight: "360px", border: " 5px #840032", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
+          <div style = {{width: "35%", minHeight: "390px", border: " 5px #840032", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
             <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">     {this.state.chosenModel} model example
             </h3>
-            <textarea style = {{position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none"}}
+            <textarea style = {{position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none", fontSize: "20px"}}
               value = {this.state.modelDesc}
               onChange = {() => {}}
             >
