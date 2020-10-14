@@ -22,31 +22,32 @@ export default class RoutesDisplay extends Component {
               <tbody className = "m-0">
                 <tr>
                   <td className = "reqList p-3" id = "row11"></td>
-                  <td className = "reqOption p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/customers</td>
+                  <td className = "reqOption p-3" id = "row12" onMouseEnter = {(event) => {this.changeLine('row12')}}>/customers</td>
                 </tr>
                 <tr>
                   <td className = "reqList p-3" id = "row21"></td>
-                  <td className = "reqOption p-3" id = "row22" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/employees</td>
+                  <td className = "reqOption p-3" id = "row22" onMouseEnter = {(event) => {this.changeLine('row22')}}>/employees</td>
                 </tr>
                 <tr>
                   <td className = "reqList p-3" id = "row31">https://api-buddy</td>
-                  <td className = "reqOption p-3" id = "row32" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/stores</td>
+                  <td className = "reqOption p-3" id = "row32" onMouseEnter = {(event) => {this.changeLine('row32')}}>/stores</td>
                 </tr>
                 <tr>
                   <td className = "reqList p-3" id = "row41"></td>
-                  <td className = "reqOption p-3" id = "row42" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/books</td>
+                  <td className = "reqOption p-3" id = "row42" onMouseEnter = {(event) => {this.changeLine('row42')}}>/books</td>
                 </tr>
                 <tr>
                   <td className = "reqList p-3" id = "row51"></td>
-                  <td className = "reqOption p-3" id = "row52" onMouseEnter = {(event) => {this.changeLine(event.target.id)}}>/orders</td>
+                  <td className = "reqOption p-3" id = "row52" onMouseEnter = {(event) => {this.changeLine('row52')}}>/orders</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div style = {{width: "400px", minHeight: "360px", border: " 5px solid #840032", display: "inline-block", position: "relative"}}>
-            <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">{this.state.chosenModel} model example</h3>
-            <p style = {{position: "absolute", width: "100px", resize: "none", marginTop: "50px"}}>
+            <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">     {this.state.chosenModel} model example
+            </h3>
+            <p style = {{position: "absolute", width: "100px", resize: "none", marginTop: "50px", whiteSpace: "pre-line"}}>
               {(this.state.modelDesc)}
             </p>
           </div>

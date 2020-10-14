@@ -44,12 +44,12 @@ export default function getModel(chosenModel) {
     case 'Order':
       return {
         "orderId": 1,
-    "date": "18/03/2018",
-    "employeeId": 4,
-    "customerId": 2,
-    "orderTotal": 428,
-    "books": [1, 2, 4]
+        "date": "18/03/2018",
+        "employeeId": 4,
+        "customerId": 2,
+        "orderTotal": 428,
+        "books": [1, 2, 4]
       };
-      
+
   }
 }
