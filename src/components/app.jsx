@@ -59,17 +59,19 @@ class App extends Component {
             />
         */}
             <Fetching
-            route='customers'
-            heading='Simple request'
-            backgroundClr='#E9EEF2'
-            headingClr='#1C3B4A'
+            route = 'customers'
+            heading = 'Simple request'
+            backgroundClr = '#E9EEF2'
+            headingClr = '#1C3B4A'
+            addHeading = 'Easily fetch the database with no prerequisites'
             />
             <Fetching
-              route='auth/employees'
-              heading='Auth-protected request'
-              token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
-              backgroundClr='#002736'
-              headingClr='#FEFEFE'
+              route = 'auth/employees'
+              heading = 'Auth-protected request'
+              token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
+              backgroundClr = '#002736'
+              headingClr = '#FEFEFE'
+              addHeading = 'Fetch auth-protected routes with a valid JWT token'
               />
             <Footer />
 
