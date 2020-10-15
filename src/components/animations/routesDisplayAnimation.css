@@ -1,7 +1,8 @@
-.fade-appear {
-    opacity: 0.01;
+.fadeOut {
+  opacity:0;
+  transition: "1s";
 }
-.fade-appear.fade-appear-active {
-    opacity: 1;
-    transition: opacity 1000ms;
+.fadeIn {
+  opacity:1;
+  transition: "1s";
 }

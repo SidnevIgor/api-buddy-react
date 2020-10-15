@@ -49,17 +49,12 @@ export default class RoutesDisplay extends Component {
           <div style = {{width: "35%", minHeight: "400px", border: " 7px #840032", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
             <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF"}} className = "p-2">     {this.state.chosenModel} model example
             </h3>
-            <CSSTransition
-              in
-              classNames = 'fade'
-              timeout = {1000}
-              appear = {true}
-              >
               <textarea style = {{ position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none", fontSize: "20px", transitionDuration:"1000ms"}}
                 value = {this.state.modelDesc}
-                onChange = {() => {}}>
+                onChange = {() => {}}
+                className = { !this.state.modelChanged ? 'fadeIn':'fadeOut' }
+                >
               </textarea>
-            </CSSTransition>
           </div>
         </div>
       </div>
@@ -78,11 +73,10 @@ export default class RoutesDisplay extends Component {
     let chosenEl = document.getElementById(id);
     let whereToMove = document.getElementById('row'+id[id.length-2]+'1');
 
-      this.setState({
-        chosenModel: this.changeChosenModel(id),
-        modelDesc: pretifyCode({},getRoute(this.changeChosenModel(id)))
-      });
-
+    this.setState({
+      chosenModel: this.changeChosenModel(id),
+      modelDesc: pretifyCode({},getRoute(this.changeChosenModel(id)))
+    });
     whereToMove.textContent = 'https://api-buddy';
     whereToMove.style.color = "#E18026";
     whereToMove.style.transition = "1s";
