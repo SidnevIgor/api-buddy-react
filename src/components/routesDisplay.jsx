@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import getRoute from './models/models';
 import pretifyCode from '../services/pretifyCode';
