@@ -33,11 +33,11 @@ export default class Fetching extends Component {
           ></textarea>
 
         </div>
-        <div className="d-flex justify-content-center">
-          <input type="submit" value="Fetch data"
-            style={{display: "inline-block", backgroundColor: this.state.mainColor, borderColor: this.state.secondaryColor, color: this.state.secondaryColor}}
-            className="m-3 btn rounded-pill btn-info"
-            onClick={(event)=> this.handleSubmit(event)}
+        <div className = "d-flex justify-content-center">
+          <input type = "submit" value="Fetch data"
+            style = {{ display: "inline-block", backgroundColor: this.state.mainColor, borderColor: this.state.secondaryColor, color: this.state.secondaryColor }}
+            className = "m-4 btn rounded-pill btn-info"
+            onClick = {(event)=> this.handleSubmit(event)}
             onMouseEnter = {() => this.changeBtn(true)}
             onMouseLeave = {() => this.changeBtn(false)}
             />
