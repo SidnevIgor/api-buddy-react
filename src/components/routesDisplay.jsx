@@ -59,6 +59,9 @@ export default class RoutesDisplay extends Component {
       </div>
     )
   }
+  componentDidMount() {
+    this.changeLine('row32');
+  }
   changeLine = (id) => {
     /*Cleaning state*/
     let list = document.getElementsByClassName('reqList');
