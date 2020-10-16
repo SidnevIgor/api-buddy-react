@@ -7,13 +7,17 @@ export default function pretifyCode(obj, data) {
         .join('{\n   ')
         .toString().split('}')
         .join('\n}')
+        .split('":')
+        .join('": ')
         .slice(1, obj.length) + ']';
   }
   else {
     return '{\n   ' +
     JSON.stringify(data).slice(1,(-1))
     .split(',"')
-    .join(',\n   "') +
+    .join(',\n   "')
+    .split('":')
+    .join('": ') +
     '\n}';
   }
 }
