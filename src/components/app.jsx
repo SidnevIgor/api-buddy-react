@@ -61,7 +61,7 @@ class App extends Component {
             <Fetching
             route = 'customers'
             heading = 'Simple request'
-            backgroundClr = '#E9EEF2'
+            backgroundClr = '#D3E0E9'
             headingClr = '#1C3B4A'
             addHeading = 'Easily fetch the database with no prerequisites'
             />
