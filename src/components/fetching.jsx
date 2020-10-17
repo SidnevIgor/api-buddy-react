@@ -13,8 +13,8 @@ export default class Fetching extends Component {
   };
   render() {
     return (
-      <div style={{fontFamily: "Inter", backgroundColor: this.props.backgroundClr}}>
-        <h1 style={{color: this.props.headingClr}} className="pl-5 pb-3 pt-4">{this.props.heading}</h1>
+      <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr}}>
+        <h1 style = {{color: this.props.headingClr}} className="pl-5 pb-3 pt-4">{this.props.heading}</h1>
         <h3 className="pl-5" style = {{fontWeight: "300", color: this.props.headingClr}}>{this.props.addHeading}</h3>
         <div className="d-flex justify-content-center">
 
@@ -41,6 +41,7 @@ export default class Fetching extends Component {
             onMouseEnter = {() => this.changeBtn(true)}
             onMouseLeave = {() => this.changeBtn(false)}
             />
+          <a className = "m-3">How does it work?</a>
         </div>
       </div>
     );
