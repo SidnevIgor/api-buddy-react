@@ -72,6 +72,7 @@ class App extends Component {
               backgroundClr = '#002736'
               headingClr = '#FEFEFE'
               addHeading = 'Fetch auth-protected routes with a valid JWT token'
+              addBtn = 'true'
               />
             <Footer />
 
