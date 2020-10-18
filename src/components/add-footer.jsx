@@ -7,7 +7,8 @@ export default class AddFooter extends Component {
   render() {
     return (
       <div style = {{backgroundColor: "#002736", textAlign: "center"}}>
-        
+        <div style = {{ borderTop: "10px solid yellow" }}>
+        </div>
       </div>
     );
   }
