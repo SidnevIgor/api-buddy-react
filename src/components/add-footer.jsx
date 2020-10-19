@@ -9,11 +9,15 @@ export default class AddFooter extends Component {
       <div style = {{backgroundColor: "#002736", textAlign: "center"}}>
         <div style = {{ borderTop: "10px dashed yellow" }}>
         </div>
-        <ol style = {{ color: "white" }}>
-          <li style = {{ color: "red" }}>First</li>
-          <li>Second</li>
-          <li>Third</li>
-        </ol>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti
+        </p>
       </div>
     );
   }
