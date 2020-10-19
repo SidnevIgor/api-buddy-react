@@ -10,14 +10,16 @@
 p {
   border-top: 5px dashed;
   border-color: #D1DF2B !important;
-  margin:0; padding: 150px;
+  margin: 0;
+  padding: 150px;
   counter-increment: section;
   position: relative;
+  color: white;
 }
 p:nth-child(even):before {
   content: counter(section);
   right: 100%;
-  margin-right: -100px;
+  margin-right: -50px;
   position: absolute;
   border-radius: 50%;
   padding: 10px;
@@ -31,7 +33,7 @@ p:nth-child(even):before {
 p:nth-child(odd):before {
   content: counter(section);
   left: 100%;
-  margin-left: -100px;
+  margin-left: -50px;
   position: absolute;
   border-radius: 50%;
   padding: 10px;
@@ -58,10 +60,15 @@ p:nth-child(odd) {
 }
 p:first-child {
   border-top: 0;
-  border-top-right-radius:0;
-  border-top-left-radius:0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 p:last-child {
-  border-bottom-right-radius:0;
-  border-bottom-left-radius:0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.middle-align {
+  position: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
