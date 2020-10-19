@@ -5,6 +5,7 @@ import RoutesDisplay from './routesDisplay';
 //import Counters from './counters.jsx';
 import Fetching from './fetching';
 import Footer from './footer';
+import AddFooter from './add-footer';
 
 class App extends Component {
   state = {
@@ -75,6 +76,7 @@ class App extends Component {
               addBtn = 'true'
               />
             <Footer />
+            <AddFooter />
 
       </React.Fragment>
     );
