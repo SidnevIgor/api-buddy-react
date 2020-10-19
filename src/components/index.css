@@ -59,8 +59,8 @@ p:nth-child(odd) {
   padding-left: 0;
 }
 p:first-child {
-  border-top: 0;
-  border-top-right-radius: 0;
+  border-top: 1;
+  border-top-right-radius: 1;
   border-top-left-radius: 0;
 }
 p:last-child {
