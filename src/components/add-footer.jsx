@@ -7,8 +7,10 @@ export default class AddFooter extends Component {
   render() {
     return (
       <div style = {{backgroundColor: "#002736", textAlign: "center"}}>
+        <div className = "add-border">
+        </div>
         <div style = {{ width: "80%" }} className = "middle-align">
-          <p>
+          <p className = "first-p">
             <h3>Get a JWT token by fetching https://api-buddy.com/api/auth</h3>
           </p>
           <p>
