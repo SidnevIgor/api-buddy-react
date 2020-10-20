@@ -7,7 +7,7 @@ export default class AddFooter extends Component {
     items: {
       'x-auth-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
     },
-    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth, {\n  method: 'POST'\n})\n  .then((data) => console.log(data))"
+    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth/customers, {\n  method: 'GET'\n})\n  .then((data) => console.log(data))"
   };
   render() {
     return (
@@ -43,7 +43,7 @@ export default class AddFooter extends Component {
               <textarea type='text' style={{ height: "400px", width: "100%", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
                   data-gramm_editor = "false"
                   className = "m-5"
-                  value = { this.state.query }
+                  value = { this.state.itemsNew }
                   onChange = {() => {}}
                 ></textarea>
             </div>
