@@ -5,7 +5,7 @@ export default class AddFooter extends Component {
   state = {
     query: 'fetch(https://api-buddy.herokuapp.com/api/auth)\n  .then((data) => console.log(data))',
     items: {
-      "x-auth-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE"
+      'x-auth-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
     }
   };
   render() {
@@ -28,7 +28,7 @@ export default class AddFooter extends Component {
               <textarea type='text' style={{ height: "400px", width: "500px", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
                   data-gramm_editor = "false"
                   className = "m-5"
-                  value = { pretifyCode(this.state.items) }
+                  value = { pretifyCode({}, this.state.items) }
                   onChange = {() => {}}
                 ></textarea>
 
