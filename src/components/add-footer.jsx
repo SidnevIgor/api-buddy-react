@@ -7,7 +7,15 @@ export default class AddFooter extends Component {
     items: {
       'x-auth-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
     },
-    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth/customers, {\n  method: 'GET'\n})\n  .then((data) => console.log(data))"
+    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth/customers, {\n  method: 'GET',\n  headers: {\n     x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE\n  }\n}).then((data) => console.log(data))",
+    itemsAnswer: {
+      "customerId": 1,
+      "firstName": "Evy",
+      "lastName": "Maxted",
+      "email": "emaxted0@theatlantic.com",
+      "tel": "266-846-9674",
+      "password": "zKEEMj"
+    }
   };
   render() {
     return (
@@ -50,6 +58,14 @@ export default class AddFooter extends Component {
           </p>
           <p>
             <h3>Get a resulting JSON</h3>
+            <div className = "d-flex justify-content-center">
+              <textarea type='text' style={{ height: "400px", width: "100%", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
+                  data-gramm_editor = "false"
+                  className = "m-5"
+                  value = { pretifyCode({},this.state.itemsAnswer) }
+                  onChange = {() => {}}
+                ></textarea>
+            </div>
           </p>
         </div>
       </div>
