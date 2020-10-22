@@ -19,7 +19,7 @@ export default class AddFooter extends Component {
   };
   render() {
     return (
-      <div style = {{backgroundColor: "#002736", textAlign: "center"}}>
+      <div style = {{ backgroundColor: "#002736", textAlign: "center" }}>
         <div className = "add-border">
         </div>
         <div style = {{ width: "80%" }} className = "middle-align">

@@ -97,7 +97,7 @@
   font-weight: 400;
   color: royalblue;
   overflow: hidden;
-  background: linear-gradient(to right, #D1DF2B, #D1DF2B 50%, royalblue 50%);
+  background: linear-gradient(to right, #D1DF2B, #D1DF2B 50%, #D3E0E9 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
