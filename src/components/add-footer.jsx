@@ -27,7 +27,7 @@ export default class AddFooter extends Component {
             <h3>Get a JWT token by fetching https://api-buddy.com/api/auth</h3>
               <div className="d-flex justify-content-center">
 
-                <textarea type='text' style={{ height: "400px", width: "600px", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
+                <textarea type='text' style={{ height: "400px", width: "40%", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
                   data-gramm_editor = "false"
                   className = "m-4"
                   value = { this.state.query }
