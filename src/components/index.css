@@ -47,12 +47,21 @@
 }
 .middle-align p:nth-child(even) {
   border-left: 5px solid;
+  border-bottom: 5px solid;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   margin-right: 30px;
   padding-right: 0;
 }
-.middle-align p:nth-child(odd) {
+.middle-align p:nth-child(1) {
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px;
+  padding-left: 0;
+}
+.middle-align p:nth-child(3) {
   border-right: 5px solid;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
