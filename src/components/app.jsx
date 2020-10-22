@@ -6,6 +6,7 @@ import RoutesDisplay from './routesDisplay';
 import Fetching from './fetching';
 import Footer from './footer';
 import AddFooter from './add-footer';
+import fetchData from '../services/fetchData';
 
 class App extends Component {
   state = {
@@ -16,6 +17,11 @@ class App extends Component {
       {id: 4, value: 4}
     ]
   };
+  constructor() {
+    super();
+    fetchData('customers','GET').then(() => {
+    });
+  }
   handleDelete = (counterId) => {
     this.setState({
       counters: this.state.counters.filter((counter) => counter.id !== counterId)
