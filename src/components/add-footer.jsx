@@ -34,13 +34,6 @@ export default class AddFooter extends Component {
                   onChange = {(event) => this.handleChange(event)}
                 ></textarea>
 
-              <textarea type='text' style={{ height: "400px", width: "600px", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
-                  data-gramm_editor = "false"
-                  className = "m-4"
-                  value = { pretifyCode({}, this.state.items) }
-                  onChange = {() => {}}
-                ></textarea>
-
               </div>
           </p>
           <p>
