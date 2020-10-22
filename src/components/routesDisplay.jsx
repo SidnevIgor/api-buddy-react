@@ -45,8 +45,8 @@ export default class RoutesDisplay extends Component {
             </table>
           </div>
 
-          <div style = {{width: "35%", minHeight: "400px", border: " 7px #840032", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
-            <h3 style = {{position: "absolute", backgroundColor: "#840032", color: "#FFFFFF", width: "100%"}} className = "p-2">     {this.state.chosenModel} model example
+          <div style = {{width: "35%", minHeight: "400px", border: " 7px #002736", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
+            <h3 style = {{position: "absolute", backgroundColor: "#002736", color: "#FFFFFF", width: "100%"}} className = "p-2">     {this.state.chosenModel} model example
             </h3>
               <textarea style = {{ position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none", fontSize: "20px", transitionDuration:"1000ms"}}
                 value = {this.state.modelDesc}
