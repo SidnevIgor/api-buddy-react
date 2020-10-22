@@ -5,9 +5,9 @@ export default class AddFooter extends Component {
   state = {
     query: "fetch(https://api-buddy.herokuapp.com/api/auth, {\n  method: 'POST'\n})\n  .then((data) => console.log(data))",
     items: {
-      'x-auth-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE'
+      'x-auth-token':'eyJhbGciOiJIUzI1NiIs.JpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN2H_hGC8n_R3ORE'
     },
-    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth/customers/1, {\n  method: 'GET',\n  headers: {\n     x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjc1NzkxMDA5M2Q4NjAwMTc5NzA5NTMiLCJpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN6TgapD4USzUdm-wHE2H_hGC8n_R3ORE\n  }\n}).then((data) => console.log(data))",
+    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth/customers/1, {\n  method: 'GET',\n  headers: {\n     x-auth-token: eyJhbGciOiJIUzI1NiIs.JpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN2H_hGC8n_R3ORE\n  }\n}).then((data) => console.log(data))",
     itemsAnswer: {
       "customerId": 1,
       "firstName": "Evy",
