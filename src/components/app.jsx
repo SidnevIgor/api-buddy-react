@@ -15,7 +15,8 @@ class App extends Component {
       {id: 2, value: 2},
       {id: 3, value: 3},
       {id: 4, value: 4}
-    ]
+    ],
+    addFooterVisibility: "hidden"
   };
   constructor() {
     super();
@@ -82,7 +83,9 @@ class App extends Component {
               addBtn = 'true'
               />
             <Footer />
-            <AddFooter />
+            <AddFooter
+              style = {{visibility: "hidden"}}
+              />
 
       </React.Fragment>
     );
