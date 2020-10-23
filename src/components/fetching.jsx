@@ -43,7 +43,7 @@ export default class Fetching extends Component {
             /><br/>
         </div>
         <div className = "d-flex justify-content-center" style = {{visibility: this.props.addBtn ? 'visible' : 'hidden'}}>
-          <a className = "m-3 opener" style = {{ color: '#D1DF2B' }}>How does it work?</a>
+          <a className = "m-3 opener" style = {{ color: '#D1DF2B' }} onClick = {this.props.addBtnClick}>How does it work?</a>
         </div>
       </div>
     );

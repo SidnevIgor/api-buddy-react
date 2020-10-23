@@ -23,6 +23,11 @@ class App extends Component {
     fetchData('customers','GET').then(() => {
     });
   }
+  handleAddFooterOpener = () => {
+    this.setState({
+      addFooterDisplay: "block"
+    })
+  }
   handleDelete = (counterId) => {
     this.setState({
       counters: this.state.counters.filter((counter) => counter.id !== counterId)
@@ -81,6 +86,7 @@ class App extends Component {
               headingClr = '#FEFEFE'
               addHeading = 'Fetch auth-protected routes with a valid JWT token'
               addBtn = 'true'
+              addBtnClick = {this.handleAddFooterOpener}
               />
             <Footer />
             <AddFooter
