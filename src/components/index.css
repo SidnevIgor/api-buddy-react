@@ -1,3 +1,6 @@
+html, body, #root {
+  height: 100%
+}
 @font-face {
   font-family: 'Inter';
   src: local('Inter'), url('./fonts/Inter/static/Inter-SemiBold-slnt=0.ttf') format('ttf');
@@ -6,7 +9,6 @@
    outline: none !important;
    box-shadow: none;
 }
-
 .middle-align p {
   border-top: 5px solid;
   border-color: #D1DF2B !important;

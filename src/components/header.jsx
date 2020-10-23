@@ -23,7 +23,7 @@ class Header extends Component {
   };
   render() {
     return (
-      <div style = {{width: "100%", height: "100%", display: "inline-block", backgroundColor: "#D3E0E9", fontFamily: "Inter"}}>
+      <div style = {{width: "100%", height: "100%", display: "inline-block", backgroundColor: "#D3E0E9", fontFamily: "Inter"}} className = "header">
         <div className = "inline-container" style = {{ display: "inline-block", width: "58%" }}>
           <h1 style={{marginLeft: "180px", marginTop: "50px", fontSize: "90px"}}>API-buddy</h1>
           <p className="lead font-weight-normal" style={{marginLeft: "180px", fontSize: "28px", width:"65%"}}>The service is a free dummy book shop API supporting GET, POST, UPDATE, DELETE requests with the following routes: https://api-buddy/{this.state.chosenRoute}</p>
