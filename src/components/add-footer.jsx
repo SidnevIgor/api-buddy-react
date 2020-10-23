@@ -27,7 +27,7 @@ export default class AddFooter extends Component {
             <h3>Get a JWT token by fetching https://api-buddy.com/api/auth</h3>
               <div className="d-flex justify-content-center">
 
-                <textarea type='text' style={{ height: "400px", width: "40%", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
+                <textarea type='text' style={{ height: "400px", width: "40%", backgroundColor: 'white', color: '#002736', resize: "none", fontSize: "18px" }}
                   data-gramm_editor = "false"
                   className = "m-4"
                   value = { this.state.query }
@@ -41,7 +41,7 @@ export default class AddFooter extends Component {
               Fetch a resource with a Header parameter 'x-auth-token'
             </h3>
             <div className = "d-flex justify-content-center">
-              <textarea type='text' style={{ height: "400px", width: "70%", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
+              <textarea type='text' style={{ height: "400px", width: "70%", backgroundColor: 'white', color: '#002736', resize: "none", fontSize: "18px" }}
                   data-gramm_editor = "false"
                   className = "m-5"
                   value = { this.state.itemsNew }
@@ -52,7 +52,7 @@ export default class AddFooter extends Component {
           <p>
             <h3>Get a resulting JSON</h3>
             <div className = "d-flex justify-content-center">
-              <textarea type='text' style={{ height: "400px", width: "40%", backgroundColor: 'white', color: 'black', resize: "none", fontSize: "18px" }}
+              <textarea type='text' style={{ height: "400px", width: "40%", backgroundColor: 'white', color: '#002736', resize: "none", fontSize: "18px" }}
                   data-gramm_editor = "false"
                   className = "m-5"
                   value = { pretifyCode({},this.state.itemsAnswer) }
