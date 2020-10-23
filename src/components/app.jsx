@@ -16,7 +16,7 @@ class App extends Component {
       {id: 3, value: 3},
       {id: 4, value: 4}
     ],
-    addFooterVisibility: "hidden"
+    addFooterDisplay: "none"
   };
   constructor() {
     super();
@@ -84,7 +84,7 @@ class App extends Component {
               />
             <Footer />
             <AddFooter
-              style = {{visibility: "hidden"}}
+              isDisplay = {this.state.addFooterDisplay}
               />
 
       </React.Fragment>
