@@ -55,11 +55,17 @@ class App extends Component {
     });
     this.setState({counters});
   }
+  handleScroll = () => {
+    window.scrollTo({
+          top: 0
+      })
+  }
   render() {
     return (
       <React.Fragment>
         <Header
           totalCounters={this.state.counters.filter((counter) => counter.value > 0).length}
+          scrollDown = { this.handleScroll }
           />
         <RoutesDisplay/>
 

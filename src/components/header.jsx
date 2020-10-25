@@ -30,7 +30,9 @@ class Header extends Component {
           <a className={this.state.buttonClass}
             onMouseEnter = {() => this.changeBtn(true)}
             onMouseLeave = {() => this.changeBtn(false)}
-            style={{marginLeft: "180px", backgroundColor: "#002736", color: "white", marginTop: "80px", fontSize: "20px"}}>Learn more</a>
+            style={{marginLeft: "180px", backgroundColor: "#002736", color: "white", marginTop: "80px", fontSize: "20px"}}
+            onClick = { () => this.props.scrollDown() }
+            >Learn more</a>
         </div>
         <div className="inline-container" style={{display: "inline-block"}}>
           <img src={require('./images/header_image.png')} alt="api-buddy-header-image" width="570px" height="500px"/>
