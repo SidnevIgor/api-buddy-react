@@ -4,7 +4,7 @@ import Header from './header.jsx';
 import RoutesDisplay from './routesDisplay';
 //import Counters from './counters.jsx';
 import Fetching from './fetching';
-import Footer from './footer';
+import Social from './footer';
 import AddFooter from './add-footer';
 import fetchData from '../services/fetchData';
 
@@ -106,7 +106,7 @@ class App extends Component {
               addBtn = 'true'
               addBtnClick = {this.handleAddFooterOpener}
               />
-            <Footer />
+            <Social />
             <AddFooter
               isDisplay = { this.state.addFooterDisplay }
               reference = { this.footerRef }

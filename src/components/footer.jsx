@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Footer extends Component {
+export default class Social extends Component {
   render () {
     return (
       <div style = {{backgroundColor: "#002736", textAlign: "right"}}>
