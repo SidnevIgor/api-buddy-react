@@ -20,7 +20,7 @@ class App extends Component {
   };
   constructor(props) {
     super(props);
-    this.myRef = React.createRef();
+    this.headerRef = React.createRef();
     fetchData('customers','GET').then(() => {
     });
   }
@@ -57,9 +57,8 @@ class App extends Component {
     this.setState({counters});
   }
   handleScroll = () => {
-    console.log(this.myRef.current);
     window.scrollTo({
-          top: this.myRef.current.refs[""].offsetTop,
+          top: this.headerRef.current.refs[""].offsetTop,
           behavior: 'smooth'
       })
   }
@@ -71,8 +70,8 @@ class App extends Component {
           scrollDown = { this.handleScroll }
           />
         <RoutesDisplay
-          reference = { this.myRef }
-          ref = { this.myRef }
+          reference = { this.headerRef }
+          ref = { this.headerRef }
           />
 
         {/*  <Counters
