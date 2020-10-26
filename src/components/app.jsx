@@ -29,11 +29,12 @@ class App extends Component {
     this.setState({
       addFooterDisplay: "block"
     });
-    console.log(this.footerRef.current.refs[""].offsetTop);
-    window.scrollTo({
-      top: this.footerRef.current.refs[""].offsetTop,
-      behavior: 'smooth'
-    });
+    setTimeout(() => {
+      window.scrollTo({
+        top: this.footerRef.current.refs[""].offsetTop,
+        behavior: 'smooth'
+      });
+    }, 100);
   }
   handleDelete = (counterId) => {
     this.setState({
@@ -64,9 +65,9 @@ class App extends Component {
   }
   handleScroll = () => {
     window.scrollTo({
-          top: this.headerRef.current.refs[""].offsetTop,
-          behavior: 'smooth'
-      })
+      top: this.headerRef.current.refs[""].offsetTop,
+      behavior: 'smooth'
+    })
   }
   render() {
     return (
