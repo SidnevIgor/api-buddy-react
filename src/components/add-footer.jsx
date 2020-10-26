@@ -15,11 +15,16 @@ export default class AddFooter extends Component {
       "email": "emaxted0@theatlantic.com",
       "tel": "266-846-9674",
       "password": "zKEEMj"
-    }
+    },
+    reference: ''
   };
+  constructor(props) {
+    super(props);
+    this.reference = this.props.reference;
+  }
   render() {
     return (
-      <div style = {{ backgroundColor: "#002736", textAlign: "center", display: this.props.isDisplay }}>
+      <div style = {{ backgroundColor: "#002736", textAlign: "center", display: this.props.isDisplay }} ref = { this.state.reference } >
         <div className = "add-border">
         </div>
         <div style = {{ width: "80%" }} className = "middle-align">

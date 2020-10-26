@@ -21,13 +21,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.headerRef = React.createRef();
+    this.footerRef = React.createRef();
     fetchData('customers','GET').then(() => {
     });
   }
   handleAddFooterOpener = () => {
     this.setState({
       addFooterDisplay: "block"
-    })
+    });
+    console.log(this.footerRef.current.refs[""].offsetTop);
+    window.scrollTo({
+      top: this.footerRef.current.refs[""].offsetTop,
+      behavior: 'smooth'
+    });
   }
   handleDelete = (counterId) => {
     this.setState({
@@ -101,9 +107,10 @@ class App extends Component {
               />
             <Footer />
             <AddFooter
-              isDisplay = {this.state.addFooterDisplay}
+              isDisplay = { this.state.addFooterDisplay }
+              reference = { this.footerRef }
+              ref = { this.footerRef }
               />
-
       </React.Fragment>
     );
   }

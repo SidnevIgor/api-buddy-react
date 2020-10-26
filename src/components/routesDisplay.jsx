@@ -10,7 +10,7 @@ export default class RoutesDisplay extends Component {
     modelDesc: {},
     reference: ''
   }
-  constructor(props) {
+  constructor(props) { 
     super(props);
     this.state.modelDesc = (pretifyCode({},getRoute(this.state.chosenModel)));
     this.reference = this.props.reference;
