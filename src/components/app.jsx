@@ -56,8 +56,10 @@ class App extends Component {
     this.setState({counters});
   }
   handleScroll = () => {
+    console.log(this);
     window.scrollTo({
-          top: 0
+          top: 0,
+          behavior: 'smooth'
       })
   }
   render() {
@@ -83,6 +85,7 @@ class App extends Component {
             backgroundClr = '#D3E0E9'
             headingClr = '#1C3B4A'
             addHeading = 'Easily fetch the database with no prerequisites'
+            refer = 'fetching1'
             />
             <Fetching
               route = 'auth/employees'
