@@ -7,15 +7,17 @@ import './animations/routesDisplayAnimation.css';
 export default class RoutesDisplay extends Component {
   state = {
     chosenModel: 'Store',
-    modelDesc: {}
+    modelDesc: {},
+    reference: ''
   }
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state.modelDesc = (pretifyCode({},getRoute(this.state.chosenModel)));
+    this.reference = this.props.reference;
   }
   render() {
     return (
-      <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "90%", width: "100%", display: "inline-block"}}>
+      <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "90%", width: "100%", display: "inline-block"}} ref = { this.state.reference }>
         <h1 className = "p-5" style={{color: "#1C3B4A"}}>Available routes</h1>
         <div style = {{ width: "100%" }}>
           <div className = "table-container" style = {{display: "inline-block", width: "40%", marginLeft: "25%"}}>
@@ -53,7 +55,7 @@ export default class RoutesDisplay extends Component {
                 onChange = {() => {}}
                 className = { !this.state.modelChanged ? 'fadeIn':'fadeOut' }
                 >
-              </textarea> 
+              </textarea>
           </div>
         </div>
       </div>

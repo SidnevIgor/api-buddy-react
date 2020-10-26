@@ -18,8 +18,9 @@ class App extends Component {
     ],
     addFooterDisplay: "none"
   };
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
     fetchData('customers','GET').then(() => {
     });
   }
@@ -56,9 +57,9 @@ class App extends Component {
     this.setState({counters});
   }
   handleScroll = () => {
-    console.log(this);
+    console.log(this.myRef.current);
     window.scrollTo({
-          top: 0,
+          top: this.myRef.current.refs[""].offsetTop,
           behavior: 'smooth'
       })
   }
@@ -69,7 +70,10 @@ class App extends Component {
           totalCounters={this.state.counters.filter((counter) => counter.value > 0).length}
           scrollDown = { this.handleScroll }
           />
-        <RoutesDisplay/>
+        <RoutesDisplay
+          reference = { this.myRef }
+          ref = { this.myRef }
+          />
 
         {/*  <Counters
             onReset={this.handleReset}
@@ -85,7 +89,6 @@ class App extends Component {
             backgroundClr = '#D3E0E9'
             headingClr = '#1C3B4A'
             addHeading = 'Easily fetch the database with no prerequisites'
-            refer = 'fetching1'
             />
             <Fetching
               route = 'auth/employees'
