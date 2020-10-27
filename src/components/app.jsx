@@ -16,7 +16,8 @@ class App extends Component {
       {id: 3, value: 3},
       {id: 4, value: 4}
     ],
-    addFooterDisplay: "none"
+    addFooterDisplay: "none",
+    socialDisplay: "block"
   };
   constructor(props) {
     super(props);
@@ -27,7 +28,8 @@ class App extends Component {
   }
   handleAddFooterOpener = () => {
     this.setState({
-      addFooterDisplay: "block"
+      addFooterDisplay: "block",
+      socialDisplay: "none"
     });
     setTimeout(() => {
       window.scrollTo({
@@ -106,7 +108,9 @@ class App extends Component {
               addBtn = 'true'
               addBtnClick = {this.handleAddFooterOpener}
               />
-            <Social />
+            <Social
+              isDisplay = { this.state.socialDisplay }
+               />
             <AddFooter
               isDisplay = { this.state.addFooterDisplay }
               reference = { this.footerRef }
