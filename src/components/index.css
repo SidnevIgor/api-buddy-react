@@ -112,7 +112,12 @@ html, body, #root {
   background-position: 0 100%;
   cursor: pointer;
 }
-.social:hover {
+.social1:hover {
+  width: 41px;
+  height: 41px;
+  transition: 0.3s;
+}
+.social2:hover {
   width: 38px;
   height: 38px;
   transition: 0.3s;
