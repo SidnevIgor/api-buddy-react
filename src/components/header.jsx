@@ -34,8 +34,8 @@ class Header extends Component {
             onClick = { () => this.props.scrollDown() }
             >Learn more</a>
         </div>
-        <div className="inline-container" style={{display: "inline-block"}}>
-          <img src={require('./images/header_image.png')} alt="api-buddy-header-image" width="570px" height="500px"/>
+        <div className="inline-container" style={{display: "inline-block", width: "40%"}} data-aos="fade-up">
+          <img src={require('./images/header_image.png')} alt="api-buddy-header-image" width="100%"/>
         </div>
       </div>
     );

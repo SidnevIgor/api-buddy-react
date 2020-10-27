@@ -10,7 +10,7 @@ export default class RoutesDisplay extends Component {
     modelDesc: {},
     reference: ''
   }
-  constructor(props) { 
+  constructor(props) {
     super(props);
     this.state.modelDesc = (pretifyCode({},getRoute(this.state.chosenModel)));
     this.reference = this.props.reference;
@@ -20,7 +20,7 @@ export default class RoutesDisplay extends Component {
       <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "90%", width: "100%", display: "inline-block"}} ref = { this.state.reference }>
         <h1 className = "p-5" style={{color: "#1C3B4A"}}>Available routes</h1>
         <div style = {{ width: "100%" }}>
-          <div className = "table-container" style = {{display: "inline-block", width: "40%", marginLeft: "25%"}}>
+          <div className = "table-container" style = {{display: "inline-block", width: "40%", marginLeft: "25%"}} data-aos="fade-right">
             <table style={{ textAlign: "left", fontSize: "27px", color: "#314C5B" }} id = "mainTable">
               <tbody>
                 <tr>
@@ -47,7 +47,7 @@ export default class RoutesDisplay extends Component {
             </table>
           </div>
 
-          <div style = {{width: "35%", minHeight: "400px", border: " 7px #002736", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}}>
+          <div style = {{width: "35%", minHeight: "400px", border: " 7px #002736", borderStyle: "solid hidden solid solid", display: "inline-block", position: "relative"}} data-aos="fade-left">
             <h3 style = {{position: "absolute", backgroundColor: "#002736", color: "#FFFFFF", width: "100%"}} className = "p-2">     {this.state.chosenModel} model example
             </h3>
               <textarea style = {{ position: "absolute", width: "100%", minHeight: "80%", resize: "none", marginTop: "50px", whiteSpace: "pre-line", backgroundColor: "transparent", border: "none", fontSize: "20px", transitionDuration:"1000ms"}}
