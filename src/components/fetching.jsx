@@ -57,9 +57,12 @@ export default class Fetching extends Component {
     this.setState({query: event.target.value})
   }
   handleSubmit = (event) => {
-    fetchData(`${this.props.route}`,'GET','',this.props.token).then(data => {
+    fetchData(`${this.props.route}`,'GET','',this.props.token)
+    .then(data => {
       let itemsStr = pretifyCode(this, data);
       this.setState({items: itemsStr});
+    }).catch((error) => {
+      alert('Sorry, server is unavailable at the moment :(');
     });
   }
   changeBtn = (open) => {
