@@ -18,13 +18,13 @@ export default class Fetching extends Component {
   };
   render() {
     return (
-      <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr, height: "100%", width: "100%", display: "inline-block"}}>
+      <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr, height: "103%", width: "100%", display: "inline-block"}}>
         <h1 style = {{color: this.props.headingClr}} className="pl-5 pb-3 pt-4">{this.props.heading}</h1>
         <h3 className="pl-5" style = {{fontWeight: "300", color: this.props.headingClr}}>{this.props.addHeading}</h3>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" style = {{ borderStyle: "solid" }}>
 
-        <div className = "m-5">
-        <img src = {require("./images/copy.png")} style = {{position: "absolute"}} width = "30px" height = "30px"></img>
+        <div className = "m-5" style = {{ borderStyle: "solid" }}>
+        <img src = { require("./images/copy.png")} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px"></img>
         <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.query}
@@ -32,7 +32,7 @@ export default class Fetching extends Component {
           ></textarea>
         </div>
 
-        <div className="d-flex m-5">
+        <div className="d-flex m-5" style = {{ borderStyle: "solid" }}>
         <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.items}
