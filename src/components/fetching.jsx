@@ -24,7 +24,7 @@ export default class Fetching extends Component {
         <div className="d-flex justify-content-center" style = {{ borderStyle: "solid" }}>
 
         <div className = "m-5" style = {{ borderStyle: "solid" }}>
-        <img src = { require("./images/copy.png")} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px"></img>
+        <img src = { require("./images/copy.png")} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px" className = "copyimg"></img>
         <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.query}

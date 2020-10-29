@@ -122,3 +122,6 @@ html, body, #root {
   height: 36px;
   transition: 0.3s;
 }
+.copyimg {
+  cursor: pointer;
+}
