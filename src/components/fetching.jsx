@@ -12,7 +12,7 @@ export default class Fetching extends Component {
   }
   state = {
     items: [],
-    query: `fetch(https://api-buddy.herokuapp.com/api/${this.props.route})\n  .then((data) => console.log(data))`,
+    query: `fetch('https://api-buddy.herokuapp.com/api/${this.props.route}')\n  .then((responce) => responce.json())\n  .then((data) => console.log(data))`,
     mainColor: this.props.backgroundClr,
     secondaryColor: this.props.headingClr,
     refernce: ''
@@ -22,9 +22,9 @@ export default class Fetching extends Component {
       <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr, height: "103%", width: "100%", display: "inline-block"}}>
         <h1 style = {{color: this.props.headingClr}} className="pl-5 pb-3 pt-4">{this.props.heading}</h1>
         <h3 className="pl-5" style = {{fontWeight: "300", color: this.props.headingClr}}>{this.props.addHeading}</h3>
-        <div className="d-flex justify-content-center" style = {{ borderStyle: "solid" }}>
+        <div className="d-flex justify-content-center">
 
-        <div className = "m-5" style = {{ borderStyle: "solid" }}>
+        <div className = "m-5">
         <img src = { require("./images/copy.png")} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px" className = "copyimg" onClick = {() => this.handleCopy()}></img>
         <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
@@ -34,7 +34,7 @@ export default class Fetching extends Component {
           ></textarea>
         </div>
 
-        <div className="d-flex m-5" style = {{ borderStyle: "solid" }}>
+        <div className="d-flex m-5">
         <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.items}
@@ -75,7 +75,7 @@ export default class Fetching extends Component {
     console.log(el.value);
     el.select();
     document.execCommand('copy');
-    swal("Code copied!");
+    swal("Code copied!","", "success");
   }
   changeBtn = (open) => {
     if(open) {
