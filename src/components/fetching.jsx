@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import swal from 'sweetalert';
 
 import fetchData from '../services/fetchData';
 import pretifyCode from '../services/pretifyCode';
@@ -24,11 +25,12 @@ export default class Fetching extends Component {
         <div className="d-flex justify-content-center" style = {{ borderStyle: "solid" }}>
 
         <div className = "m-5" style = {{ borderStyle: "solid" }}>
-        <img src = { require("./images/copy.png")} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px" className = "copyimg"></img>
+        <img src = { require("./images/copy.png")} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px" className = "copyimg" onClick = {() => this.handleCopy()}></img>
         <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.query}
             onChange={(event) => this.handleChange(event)}
+            id = "codeArea"
           ></textarea>
         </div>
 
@@ -67,6 +69,13 @@ export default class Fetching extends Component {
     }).catch((error) => {
       alert('Sorry, server is unavailable at the moment :(');
     });
+  }
+  handleCopy = () => {
+    let el = document.getElementById('codeArea');
+    console.log(el.value);
+    el.select();
+    document.execCommand('copy');
+    swal("Code copied!");
   }
   changeBtn = (open) => {
     if(open) {
