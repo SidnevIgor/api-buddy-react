@@ -22,20 +22,20 @@ export default class Fetching extends Component {
       <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr, minHeight: "103%", width: "100%", display: "inline-block"}}>
         <h1 style = {{color: this.props.headingClr}} className="pl-5 pb-3 pt-4">{this.props.heading}</h1>
         <h3 className="pl-5" style = {{fontWeight: "300", color: this.props.headingClr}}>{this.props.addHeading}</h3>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" style = {{width: "100%"}}>
 
-        <div className = "m-5">
-        <img src = { require(`./images/${this.props.backgroundClr == "#D3E0E9" ? 'copyW' : 'copyB'}.png`)} style = {{position: "relative", bottom: "5%", left: "93%"}} width = "30px" height = "30px" className = "copyimg" onClick = {() => this.handleCopy()}></img>
-        <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
+        <div className = "m-5" style = {{width: "30%"}}>
+        <textarea type='text' style={{ height: "400px", width: "100%", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.query}
             onChange={(event) => this.handleChange(event)}
             id = "codeArea"
           ></textarea>
+        <img src = { require(`./images/${this.props.backgroundClr == "#D3E0E9" ? 'copyW' : 'copyB'}.png`)} style = {{position: "relative", bottom: "12%", left: "90%"}} width = "7%" height = "7%" className = "copyimg" onClick = {() => this.handleCopy()}></img>
         </div>
 
-        <div className="d-flex m-5">
-        <textarea type='text' style={{ height: "400px", width: "550px", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
+        <div className="d-flex m-5" style = {{width: "30%"}}>
+        <textarea type='text' style={{ height: "400px", width: "100%", backgroundColor: this.props.headingClr, color: this.props.backgroundClr, resize: "none", fontSize: "18px" }}
             data-gramm_editor="false"
             value={this.state.items}
             onChange={() => {}}
