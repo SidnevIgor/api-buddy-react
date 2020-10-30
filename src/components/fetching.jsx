@@ -19,7 +19,7 @@ export default class Fetching extends Component {
   };
   render() {
     return (
-      <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr, height: "103%", width: "100%", display: "inline-block"}}>
+      <div style = {{ fontFamily: "Inter", backgroundColor: this.props.backgroundClr, minHeight: "103%", width: "100%", display: "inline-block"}}>
         <h1 style = {{color: this.props.headingClr}} className="pl-5 pb-3 pt-4">{this.props.heading}</h1>
         <h3 className="pl-5" style = {{fontWeight: "300", color: this.props.headingClr}}>{this.props.addHeading}</h3>
         <div className="d-flex justify-content-center">

@@ -17,7 +17,7 @@ export default class RoutesDisplay extends Component {
   }
   render() {
     return (
-      <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", height: "90%", width: "100%", display: "inline-block"}} ref = { this.state.reference }>
+      <div style={{fontFamily: "Inter", backgroundColor: "#E9EEF2", minHeight: "90%", width: "100%", display: "inline-block"}} ref = { this.state.reference }>
         <h1 className = "p-5" style={{color: "#1C3B4A"}}>Available routes</h1>
         <div style = {{ width: "100%" }}>
           <div className = "table-container" style = {{display: "inline-block", width: "40%", marginLeft: "25%"}} data-aos="fade-right">
