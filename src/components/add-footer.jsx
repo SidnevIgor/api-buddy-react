@@ -3,11 +3,11 @@ import pretifyCode from '../services/pretifyCode';
 
 export default class AddFooter extends Component {
   state = {
-    query: "fetch(https://api-buddy.herokuapp.com/api/auth, {\n  method: 'POST'\n})\n  .then((data) => console.log(data))",
+    query: "fetch('https://api-buddy.herokuapp.com/api/auth', {\n  method: 'POST',\n  body: {\n   'firstName': 'John',\n   'lastName': 'Doe',\n   'email': 'john.doe@gmail.com',\n   'tel': '123-456-78',\n   'password': 'Qwerty'\n  }\n})\n  .then((response) => response.json())\n  .then((data) => console.log(data))",
     items: {
       'x-auth-token':'eyJhbGciOiJIUzIs.JpYXQiOjE2MDV9.PjPqjLi221SN2H_E'
     },
-    itemsNew: "fetch(https://api-buddy.herokuapp.com/api/auth/customers/1, {\n  method: 'GET',\n  headers: {\n     x-auth-token: eyJhbGciOiJIUzI1NiIs.JpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN2H_hGC8n_R3ORE\n  }\n}).then((data) => console.log(data))",
+    itemsNew: "fetch('https://api-buddy.herokuapp.com/api/auth/customers/1', {\n  method: 'GET',\n  headers: {\n     x-auth-token: eyJhbGciOiJIUzI1NiIs.JpYXQiOjE2MDE1MzQyMjV9.PjPqjLi221SN2H_hGC8n_R3ORE\n  }\n}).then((response) => response.json())\n  .then((data) => console.log(data))",
     itemsAnswer: {
       "customerId": 1,
       "firstName": "Evy",
@@ -55,7 +55,7 @@ export default class AddFooter extends Component {
           </p>
           <p>
             <h3>
-              Fetch a resource with a Header parameter 'x-auth-token'
+              Fetch an auth-protected resource with a parameter 'x-auth-token'
             </h3>
             <div className = "d-flex justify-content-center">
               <textarea type='text' style={{ height: "400px", width: "70%", backgroundColor: 'white', color: '#002736', resize: "none", fontSize: "18px" }}

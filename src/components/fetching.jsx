@@ -12,7 +12,7 @@ export default class Fetching extends Component {
   }
   state = {
     items: [],
-    query: `fetch('https://api-buddy.herokuapp.com/api/${this.props.route}')\n  .then((responce) => responce.json())\n  .then((data) => console.log(data))`,
+    query: `fetch('https://api-buddy.herokuapp.com/api/${this.props.route}')\n  .then((response) => response.json())\n  .then((data) => console.log(data))`,
     mainColor: this.props.backgroundClr,
     secondaryColor: this.props.headingClr,
     refernce: ''
