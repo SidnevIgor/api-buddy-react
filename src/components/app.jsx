@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Header from './header.jsx';
 import RoutesDisplay from './routesDisplay';
-//import Counters from './counters.jsx';
+import Counters from './counters.jsx';
 import Fetching from './fetching';
 import Social from './footer';
 import AddFooter from './add-footer';
